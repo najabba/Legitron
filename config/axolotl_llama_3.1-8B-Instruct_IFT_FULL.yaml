@@ -1,0 +1,71 @@
+base_model: meta-llama/Llama-3.1-8B-Instruct
+bf16: auto
+chat_template: tokenizer_default
+datasets:
+  - path: /capstor/store/cscs/swissai/a127/meditron/datasets/legitron/legitron-mixture-text.jsonl
+    ds_type: json
+    type: completion
+    field: text
+  - path: /capstor/store/cscs/swissai/a127/meditron/datasets/legitron/legitron-mixture-instruction-tuning.jsonl
+    type: chat_template
+    split: train
+    field_messages: conversations
+    message_property_mappings:
+      role: from
+      content: value
+
+
+# This is the path where axolotl caches the prepared dataset
+dataset_prepared_path: /capstor/store/cscs/swissai/a127/homes/$USER/prepared/legitron_training
+
+# Output directory where model checkpoints and logs will be saved
+output_dir: /capstor/store/cscs/swissai/a127/homes/$USER/models/llama3.1-8B-IFT_FULL
+
+shuffle_merged_datasets: true
+dataset_processes: 64
+flash_attention: true
+sequence_len: 2048
+gradient_accumulation_steps: 2
+micro_batch_size: 8
+
+group_by_length: false
+pad_to_sequence_len: true
+sample_packing: true
+optimizer: adamw_torch
+optim_args:
+  fused: true
+cosine_min_lr_ratio: 0.1
+learning_rate: 1.0e-5
+warmup_ratio: 0.0
+weight_decay: 0.05
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+load_in_4bit: false
+load_in_8bit: false
+logging_steps: 1
+num_epochs: 1
+saves_per_epoch: 2
+evals_per_epoch: 0
+eval_set_size: 0.0
+eval_table_size: null
+lr_scheduler: cosine
+max_grad_norm: 1.0
+resume_from_checkpoint: null
+strict: false
+tf32: false
+tokenizer_type: AutoTokenizer
+type: AutoModelForCausalLM
+special_tokens:
+  pad_token: "[PAD]"
+flash_attn_rms_norm: true
+flash_attn_fuse_qkv: false
+
+wandb_entity:
+wandb_log_model: null
+wandb_mode: disabled 
+wandb_name: Meditron-Apertus-8B-only-med-no-moove
+wandb_project: Meditron Apertus
+wandb_watch: null
+
+deepspeed: /users/$USER/Legitron/config/deepspeed.json
