@@ -3,11 +3,12 @@
 #SBATCH --chdir /users/vesy/
 #SBATCH --output /users/vesy/Legitron/reports/rag_eval/RAG_EVAL-%x.%j.out
 #SBATCH --error /users/vesy/Legitron/reports/rag_eval/RAG_EVAL-%x.%j.err
-#SBATCH --nodes 4
+#SBATCH --partition=debug
+#SBATCH --nodes 1
 #SBATCH --ntasks-per-node 1
-#SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task 288
-#SBATCH --time 04:00:00
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task 32
+#SBATCH --time 01:30:00
 #SBATCH --environment /users/vesy/.edf/axolotl.toml
 #SBATCH -A a127
 
@@ -22,7 +23,8 @@ set -x
 # -----------------------------------
 # CONFIGURATION (EDIT IF NECESSARY)
 # -----------------------------------
-
+#"meta-llama/Meta-Llama-3-8B-Instruct"
+#"/capstor/store/cscs/swissai/a127/homes/nabbassi/models/llama3.1-8B-IFT_charlotte"
 MODEL_PATH="/capstor/store/cscs/swissai/a127/homes/nabbassi/models/llama3.1-8B-IFT_charlotte"
 INDEX_DIR="/users/vesy/Legitron/RAG/ihl_index"
 SCRIPT_PATH="/users/vesy/Legitron/evaluation/evaluateRAG.py"

@@ -1,226 +1,186 @@
 #!/usr/bin/env python3
 """
-Query the LLM with RAG - retrieves relevant rules and sends them to the LLM
-For use on CSCS
+Query the LLM with RAG
+Embeddings are computed ONLY from rule_text.
+Interpretations are appended AFTER retrieval.
 """
 
 import json
 import argparse
 import os
-import sys
-from pathlib import Path
-
 import numpy as np
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 import torch
-from sentence_transformers import SentenceTransformer, util
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+
+# ============================================================
+#              LOAD RAG INDEX
+# ============================================================
+
 def load_rag_index(index_dir: str):
-    """Load NumPy embeddings and rules metadata"""
-    embeddings_path = os.path.join(index_dir, "embeddings.npy")
+    emb_path = os.path.join(index_dir, "embeddings.npy")
     rules_path = os.path.join(index_dir, "rules.json")
-    
-    if not os.path.exists(embeddings_path):
-        raise FileNotFoundError(f"Embeddings not found at {embeddings_path}. Run build_rag.py first.")
-    
-    # Load the raw numpy matrix
-    embeddings = np.load(embeddings_path)
-    
+
+    if not os.path.exists(emb_path):
+        raise FileNotFoundError("Embeddings not found. Run build_rag.py first.")
+
+    embeddings = np.load(emb_path)
+
     with open(rules_path, "r", encoding="utf-8") as f:
         rules = json.load(f)
-    
-    print(f"[RAG] Loaded index with {len(embeddings)} vectors")
+
+    assert len(embeddings) == len(rules), "Embedding/rule count mismatch"
+
+    print(f"[RAG] Loaded {len(rules)} rules")
     return embeddings, rules
 
+
+# ============================================================
+#              RETRIEVE CONTEXT
+# ============================================================
+
 def retrieve_context(
-    query: str,
-    model: SentenceTransformer,
-    embeddings: np.ndarray,
-    rules: list,
-    top_k: int = 5,
-) -> str:
-    """Retrieve top-k relevant rules for the query"""
-    # 1. Encode query
-    query_embedding = model.encode(query, convert_to_tensor=True)
-    
-    # 2. Compute Cosine Similarity (Query vs All Stored Embeddings)
-    # util.cos_sim is optimized and faster than manual numpy math
-    corpus_embeddings = torch.from_numpy(embeddings).to(query_embedding.device)
-    cos_scores = util.cos_sim(query_embedding, corpus_embeddings)[0]
+    query,
+    embed_model,
+    embeddings,
+    rules,
+    top_k=5,
+    min_similarity=0.7,
+    max_interp_words=200,
+):
+    query_emb = embed_model.encode([query]).astype("float32")
+    similarities = cosine_similarity(query_emb, embeddings)[0]
 
-    # 3. Get Top-K Scores
-    top_results = torch.topk(cos_scores, k=min(top_k, len(rules)))
-    
-    # 4. Build context
+    # sort indices by similarity (descending)
+    ranked_idx = similarities.argsort()[::-1]
+
     context_parts = []
-    print(f"\n[RAG] Top {top_k} matches:")
-    
-    for score, idx in zip(top_results.values, top_results.indices):
-        idx = int(idx) # Convert tensor to int
+    used = 0
+
+    for idx in ranked_idx:
+        sim = similarities[idx]
+
+        # 🔥 HARD FILTER
+        if sim < min_similarity:
+            break
+
         rule = rules[idx]
-        print(f"  - [{score:.4f}] Rule {idx}") # Debug print
-        context_parts.append(f"[Rule {idx}] {rule['text']}")
-    
-    context = "\n\n".join(context_parts)
-    return context
+        rule_id = rule.get("rule_id", "Unknown")
+        rule_text = rule.get("rule_text", "").strip()
+        interpretation = (rule.get("interpretation") or "").strip()
 
-def build_prompt(query: str, context: str, system_prompt: str = None) -> str:
-    """Build the final prompt for the LLM"""
-    if system_prompt is None:
-        system_prompt = "You are a helpful assistant specialized in international humanitarian law and legal matters. Answer the user's question based on the provided context."
-    
-    prompt = f"""{system_prompt}
+        block = [
+            f"### Rule {rule_id}  (similarity = {sim:.3f})",
+            rule_text
+        ]
 
-## Context from Knowledge Base:
+        if interpretation:
+            words = interpretation.split()
+            short_interp = " ".join(words[:max_interp_words])
+            if len(words) > max_interp_words:
+                short_interp += " …"
+
+            block.append("\nInterpretation (extract):")
+            block.append(short_interp)
+
+        context_parts.append("\n".join(block))
+        used += 1
+
+        if used >= top_k:
+            break
+
+    return "\n\n".join(context_parts)
+# ============================================================
+#              BUILD PROMPT
+# ============================================================
+
+def build_prompt(query, context):
+    system_prompt = (
+        "You are an expert in International Humanitarian Law. "
+        "Answer the question using ONLY the rules provided below. "
+        "Cite rule numbers explicitly in your answer."
+    )
+
+    return f"""
+{system_prompt}
+
+### CONTEXT:
 {context}
 
-## Question:
+### QUESTION:
 {query}
 
-There can be multiple correct options.
-
-## Answer:"""
-    return prompt
+### ANSWER:
+""".strip()
 
 
-def query_llm(
-    prompt: str,
-    model_path: str,
-    device: str = "cuda" if torch.cuda.is_available() else "cpu",
-    max_length: int = 1024,
-    temperature: float = 0.7,
-) -> str:
-    """Query the LLM with the given prompt"""
-    print(f"[LLM] Loading model: {model_path}")
-    
+# ============================================================
+#              RUN LLM
+# ============================================================
+
+def query_llm(prompt, model_path, max_new_tokens=512, temperature=0.2):
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
-        torch_dtype=torch.float16,
         device_map="auto",
+        torch_dtype=torch.float16,
         trust_remote_code=True,
     )
-    
-    print("[LLM] Generating response...")
-    
-    # Apply chat template if available
-    messages = [{"role": "user", "content": prompt}]
-    
-    try:
-        inputs = tokenizer.apply_chat_template(
-            messages,
-            add_generation_prompt=True,
-            return_tensors="pt",
-        ).to(model.device)
-    except Exception:
-        # Fallback for models without chat template
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    
-    # Generate
+
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
     with torch.no_grad():
         outputs = model.generate(
-            inputs,
-            max_new_tokens=max_length,
+            **inputs,
+            max_new_tokens=max_new_tokens,
             temperature=temperature,
             top_p=0.9,
             do_sample=True,
             pad_token_id=tokenizer.eos_token_id,
         )
-    
-    # Decode
-    response = tokenizer.decode(outputs[0][inputs.shape[1]:], skip_special_tokens=True)
-    return response.strip()
 
+    return tokenizer.decode(
+        outputs[0][inputs["input_ids"].shape[1]:],
+        skip_special_tokens=True,
+    ).strip()
+
+
+# ============================================================
+#              MAIN
+# ============================================================
 
 def main():
-    parser = argparse.ArgumentParser(description="Query LLM with RAG on CSCS")
-    parser.add_argument(
-        "--index-dir",
-        type=str,
-        default="/users/$USER/ML_legitron/RAG/ihl_index",
-        help="Directory containing embeddings",
-    )
-    parser.add_argument(
-        "--embedding-model",
-        type=str,
-        default="BAAI/bge-large-en",
-        help="Embedding model for retrieval",
-    )
-    parser.add_argument(
-        "--llm-model",
-        type=str,
-        required=True,
-        help="Path to fine-tuned LLM model",
-    )
-    parser.add_argument(
-        "--question",
-        type=str,
-        required=True,
-        help="Question to ask",
-    )
-    parser.add_argument(
-        "--top-k",
-        type=int,
-        default=5,
-        help="Number of rules to retrieve",
-    )
-    parser.add_argument(
-        "--max-length",
-        type=int,
-        default=1024,
-        help="Maximum length of generated response",
-    )
-    parser.add_argument(
-        "--temperature",
-        type=float,
-        default=0.7,
-        help="Temperature for generation",
-    )
-    parser.add_argument(
-        "--output-file",
-        type=str,
-        default=None,
-        help="File to save output (default: stdout)",
-    )
-    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--index-dir", type=str, required=True)
+    parser.add_argument("--embedding-model", type=str, default="BAAI/bge-large-en")
+    parser.add_argument("--llm-model", type=str, required=True)
+    parser.add_argument("--question", type=str, required=True)
+    parser.add_argument("--top-k", type=int, default=8)
     args = parser.parse_args()
-    
-    # Expand environment variables in paths
-    index_dir = os.path.expandvars(args.index_dir)
-    llm_model = os.path.expandvars(args.llm_model)
-    
-    # Load RAG components
-    index, rules = load_rag_index(index_dir)
-    embedding_model = SentenceTransformer(args.embedding_model)
-    
-    # Process question
-    question = args.question
-    print(f"\n[Q] {question}\n")
-    
-    # Retrieve context
-    context = retrieve_context(question, embedding_model, index, rules, args.top_k)
-    print(f"[RAG] Retrieved {args.top_k} relevant rules\n")
-    
-    # Build prompt
-    prompt = build_prompt(question, context)
-    
-    # Query LLM
-    response = query_llm(
-        prompt,
-        llm_model,
-        max_length=args.max_length,
-        temperature=args.temperature,
-    )
-    
-    # Output result
-    output_text = f"[A] {response}\n"
-    print(output_text)
-    
-    if args.output_file:
-        with open(args.output_file, "w", encoding="utf-8") as f:
-            f.write(f"Question: {question}\n\n")
-            f.write(f"Answer: {response}\n")
-        print(f"\n[SAVED] Output saved to {args.output_file}")
+
+    embeddings, rules = load_rag_index(args.index_dir)
+
+    embed_model = SentenceTransformer(args.embedding_model)
+
+    context = retrieve_context(
+        query=args.question,
+        embed_model=embed_model,
+        embeddings=embeddings,
+        rules=rules,
+        top_k=args.top_k,  
+)
+
+    print("\n[RAG CONTEXT]\n")
+    print(context)
+
+    prompt = build_prompt(args.question, context)
+
+    answer = query_llm(prompt, args.llm_model)
+
+    print("\n=== ANSWER ===\n")
+    print(answer)
 
 
 if __name__ == "__main__":

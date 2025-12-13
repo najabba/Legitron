@@ -27,7 +27,7 @@ SCRIPT_PATH="/users/vesy/Legitron/RAG/build_rag.py"
 echo "Building RAG FAISS index..."
 
 # Default parameters (override with command line arguments)
-RULES_FILE="${RULES_FILE:-/users/vesy/Legitron/RAG/rules_clean_text.json}"
+RULES_FILE="${RULES_FILE:-/users/vesy/Legitron/RAG/rules_with_interpretations.json}"
 EMBEDDING_MODEL="${EMBEDDING_MODEL:-BAAI/bge-large-en}"
 OUTPUT_DIR="${OUTPUT_DIR:-/users/vesy/Legitron/RAG/ihl_index}"
 
