@@ -5,8 +5,8 @@
 #SBATCH --error /users/vesy/Legitron/reports/rag_eval/RAG_EVAL-%x.%j.err
 #SBATCH --nodes 4
 #SBATCH --ntasks-per-node 1
-#SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task 32
+#SBATCH --gres=gpu:4
+#SBATCH --cpus-per-task 288
 #SBATCH --time 04:00:00
 #SBATCH --environment /users/vesy/.edf/axolotl.toml
 #SBATCH -A a127

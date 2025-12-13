@@ -31,7 +31,12 @@ B) {options['B']}
 C) {options['C']}
 D) {options['D']}
 
-Return ONLY the letter(s) of the correct answer (e.g. 'A' or 'A, C')."""
+Think quickly step by step and Select the best option or options and reply with the final answer inside <answer></answer> tags, here are few examples:
+<answer>A</answer>,
+<answer>C</answer>,
+<answer>B,C,D</answer>,
+<answer>A,B,C,D</answer>
+"""
 
     messages = [
         {"role": "user", "content": prompt_text}
@@ -61,7 +66,16 @@ Return ONLY the letter(s) of the correct answer (e.g. 'A' or 'A, C')."""
     # 3. Decode output
     # Slice [input_ids.shape[1]:] to remove the prompt from the output
     response = tokenizer.decode(outputs[0][input_ids.shape[1]:], skip_special_tokens=True)
-    return response.strip()
+    # Extract <answer>...</answer>
+    match = re.search(r"<answer>(.*?)</answer>", response, re.DOTALL | re.IGNORECASE)
+    if match:
+        answer_text = match.group(1).strip()
+    else:
+        answer_text = ""  # No answer found
+
+    predicted_letters = sorted(set(re.findall(r"[A-D]", answer_text.upper())))
+
+    return predicted_letters, response
 
 def evaluate(model_path):
     # Load Data
@@ -79,14 +93,16 @@ def evaluate(model_path):
     total = len(data)
     results = []
 
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    output_filename = f"/users/$USER/Legitron/evaluation/predictions/local_model_results_{timestamp}.json"
     print(f"\nStarting evaluation on {total} questions using local checkpoint...\n")
 
     for i, item in enumerate(data):
-        raw_response = get_prediction(model, tokenizer, item['question'], item['options'])
-        
+        # raw_response = get_prediction(model, tokenizer, item['question'], item['options'])
+        predicted_letters, raw_response = get_prediction(model, tokenizer, item['question'], item['options'])
         # Extract Letters (A, B, C, D) from response
         # Using Regex to ignore extra text like "The answer is A"
-        predicted_letters = sorted(list(set(re.findall(r'[A-D]', raw_response.upper()))))
+        # predicted_letters = sorted(list(set(re.findall(r'[A-D]', raw_response.upper()))))
         ground_truth = sorted(item['correct_answers'])
         
         # Check correctness
@@ -118,13 +134,14 @@ def evaluate(model_path):
 	    "correct": is_correct
         })
 
+        # Save results
+        with open(output_filename, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=4)
+
     accuracy = (score / total) * 100
     print(f"\nFinal Accuracy: {accuracy:.2f}%")
         
-    # Save results
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    output_filename = f"/users/$USER/Legitron/evaluation/predictions/local_model_results_{timestamp}.json"
-    
+    # Save results    
     with open(output_filename, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4)
 

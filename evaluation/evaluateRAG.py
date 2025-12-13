@@ -11,11 +11,11 @@ import re
 import argparse
 from datetime import datetime
 import numpy as np
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_similarity
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-INPUT_FILE = "/users/vesy/Legitron/datasets/law_benchmark_data.json"
+INPUT_FILE = "/users/nabbassi/ML_legitron/datasets/law_benchmark_data.json"
 
 
 # ============================================================
@@ -31,21 +31,26 @@ def load_rag_index(index_dir):
 
 
 def retrieve_context(query, embed_model, embeddings, rules, top_k=5):
-    query_emb = embed_model.encode([query]).astype("float32")
-    sims = cosine_similarity(query_emb, embeddings)[0]
-    idxs = sims.argsort()[-top_k:][::-1]
+    query_embed = embed_model.encode(query, convert_to_tensor=True)
 
-    parts = []
-    for idx in idxs:
-        rule_id = rules[idx].get("rule_id", idx+1)
-        parts.append(f"[Rule {rule_id}]\n{rules[idx]['text']}\n")
-    return "\n".join(parts)
+    corpus_embeddings = torch.from_numpy(embeddings).to(query_embed.device)
+    cos_scores = util.cos_sim(query_embed, corpus_embeddings)[0]
 
+    top_results = torch.topk(cos_scores, k=min(top_k, len(rules)))
+
+    context_parts = []
+
+    for score, idx in zip(top_results.values, top_results.indices):
+        idx = int(idx)
+        rule = rules[idx]
+        context_parts.append(f"[Rule {idx+1}] {rule['text']}")
+
+    return "\n".join(context_parts)
 
 def build_rag_prompt(question, options, context):
     return f"""
 You are a legal expert in International Humanitarian Law.
-Use ONLY the rules in the context to answer the MCQ.
+Answer the MCQs based on the provided context.
 
 ### CONTEXT:
 {context}
@@ -60,9 +65,7 @@ C) {options['C']}
 D) {options['D']}
 
 ### INSTRUCTIONS:
-First, provide the ONLY IHL source that correspond the best inside <source></source>.
-Example: <source>Rule 123</source>
-Then provide the MCQ answer inside <answer></answer> tags in the format:
+Think quickly step by step and then provide the MCQ answer inside <answer></answer> tags in the format:
 <answer>A</answer>
 or
 <answer>A,C</answer>
@@ -70,10 +73,12 @@ or
 <answer>A,C,B</answer>
 or
 <answer>A,C,D,B</answer>
-You can of course use other permutations of the letters.
+There can be other permutations of the examples provided for the correct answers..
 
+Also provide the IHL source that correspond the best inside <source></source>.
+Example: <source>Rule 123</source> (could be multiple sources)
 ### ANSWER:
-""".strip()
+"""
 
 
 # ============================================================
@@ -113,7 +118,7 @@ def get_prediction(model, tokenizer, question, options, rag_context):
 
     output_ids = model.generate(
         input_ids,
-        max_new_tokens=300,
+        max_new_tokens=1024,
         temperature=0.1,
         do_sample=False,
         pad_token_id=tokenizer.eos_token_id,
@@ -127,7 +132,7 @@ def get_prediction(model, tokenizer, question, options, rag_context):
     # Extract <answer>
     ans_match = re.search(r"<answer>(.*?)</answer>", response, re.DOTALL | re.IGNORECASE)
     answer_text = ans_match.group(1).strip() if ans_match else ""
-    predicted_letters = sorted(set(re.findall(r"[A-D]", answer_text)))
+    predicted_letters = sorted(set(re.findall(r"[A-D]", answer_text.upper())))
 
     # Extract <source>
     src_match = re.search(r"<source>(.*?)</source>", response, re.DOTALL | re.IGNORECASE)
@@ -157,7 +162,7 @@ def evaluate(model_path, index_dir, embed_model_name="BAAI/bge-large-en"):
     total = len(data)
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    out = f"/users/vesy/Legitron/evaluation/predictions/local_model_results_{timestamp}.json"
+    out = f"/users/nabbassi/ML_legitron/evaluation/predictions/local_model_results_{timestamp}.json"
 
     print(f"\nRunning evaluation with RAG on {total} questions...")
     print(f"Saving incremental results to: {out}\n")
@@ -167,8 +172,10 @@ def evaluate(model_path, index_dir, embed_model_name="BAAI/bge-large-en"):
 
     for i, item in enumerate(data):
         # ----- RAG retrieval -----
+        choices = [f"{key}) {value}" for key, value in item["options"].items()]
+        question_prompt = item["question"] + "\n" + "\n".join(choices)
         rag_context = retrieve_context(
-            item["question"], embed_model, embeddings, rules, top_k=5
+            question_prompt, embed_model, embeddings, rules, top_k=5
         )
 
         predicted_letters, predicted_source, raw_output = get_prediction(
@@ -189,6 +196,7 @@ def evaluate(model_path, index_dir, embed_model_name="BAAI/bge-large-en"):
         if source_correct:
             source_score += 1
 
+        status_icon = "✅" if correct else "❌"
         print(f"[{i+1}/{total}] Correct={correct} Pred={predicted_letters} True={ground_truth}")
 
         result = {

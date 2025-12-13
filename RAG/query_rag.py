@@ -10,54 +10,59 @@ import os
 import sys
 from pathlib import Path
 
-import faiss
+import numpy as np
 import torch
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, util
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-
 def load_rag_index(index_dir: str):
-    """Load FAISS index and rules metadata"""
-    index_path = os.path.join(index_dir, "faiss.index")
+    """Load NumPy embeddings and rules metadata"""
+    embeddings_path = os.path.join(index_dir, "embeddings.npy")
     rules_path = os.path.join(index_dir, "rules.json")
     
-    if not os.path.exists(index_path):
-        raise FileNotFoundError(f"Index not found at {index_path}. Run build_rag.py first.")
+    if not os.path.exists(embeddings_path):
+        raise FileNotFoundError(f"Embeddings not found at {embeddings_path}. Run build_rag.py first.")
     
-    index = faiss.read_index(index_path)
+    # Load the raw numpy matrix
+    embeddings = np.load(embeddings_path)
     
     with open(rules_path, "r", encoding="utf-8") as f:
         rules = json.load(f)
     
-    print(f"[RAG] Loaded index with {index.ntotal} vectors")
-    return index, rules
-
+    print(f"[RAG] Loaded index with {len(embeddings)} vectors")
+    return embeddings, rules
 
 def retrieve_context(
     query: str,
     model: SentenceTransformer,
-    index: faiss.Index,
+    embeddings: np.ndarray,
     rules: list,
     top_k: int = 5,
 ) -> str:
     """Retrieve top-k relevant rules for the query"""
-    # Encode query
-    query_embedding = model.encode([query]).astype("float32")
-    faiss.normalize_L2(query_embedding)
+    # 1. Encode query
+    query_embedding = model.encode(query, convert_to_tensor=True)
     
-    # Search
-    distances, indices = index.search(query_embedding, top_k)
+    # 2. Compute Cosine Similarity (Query vs All Stored Embeddings)
+    # util.cos_sim is optimized and faster than manual numpy math
+    corpus_embeddings = torch.from_numpy(embeddings).to(query_embedding.device)
+    cos_scores = util.cos_sim(query_embedding, corpus_embeddings)[0]
+
+    # 3. Get Top-K Scores
+    top_results = torch.topk(cos_scores, k=min(top_k, len(rules)))
     
-    # Build context
+    # 4. Build context
     context_parts = []
-    for idx, score in zip(indices[0], distances[0]):
-        if idx < len(rules):
-            rule = rules[idx]
-            context_parts.append(f"[Rule {idx}] {rule['text']}")
+    print(f"\n[RAG] Top {top_k} matches:")
+    
+    for score, idx in zip(top_results.values, top_results.indices):
+        idx = int(idx) # Convert tensor to int
+        rule = rules[idx]
+        print(f"  - [{score:.4f}] Rule {idx}") # Debug print
+        context_parts.append(f"[Rule {idx}] {rule['text']}")
     
     context = "\n\n".join(context_parts)
     return context
-
 
 def build_prompt(query: str, context: str, system_prompt: str = None) -> str:
     """Build the final prompt for the LLM"""
@@ -71,6 +76,8 @@ def build_prompt(query: str, context: str, system_prompt: str = None) -> str:
 
 ## Question:
 {query}
+
+There can be multiple correct options.
 
 ## Answer:"""
     return prompt
@@ -130,13 +137,13 @@ def main():
     parser.add_argument(
         "--index-dir",
         type=str,
-        default="/users/$USER/Legitron/RAG/ihl_index",
-        help="Directory containing FAISS index",
+        default="/users/$USER/ML_legitron/RAG/ihl_index",
+        help="Directory containing embeddings",
     )
     parser.add_argument(
         "--embedding-model",
         type=str,
-        default="BAAI/bge-small-en",
+        default="BAAI/bge-large-en",
         help="Embedding model for retrieval",
     )
     parser.add_argument(

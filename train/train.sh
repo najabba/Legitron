@@ -10,9 +10,10 @@
 #SBATCH --time 11:59:59 # maximum execution time (DD-HH:MM:SS)
 #SBATCH --environment /users/$USER/.edf/axolotl.toml
 #SBATCH -A a127
+export WANDB_CACHE_DIR=/capstor/store/cscs/swissai/a127/homes/$USER/wandb_cache
 export WANDB_DIR=/capstor/store/cscs/swissai/a127/homes/$USER/wandb
 export WANDB_API_KEY= #YOUR API KEY
-export WANDB_MODE="offline"
+export WANDB_MODE="online"
 export HF_TOKEN= #YOUR TOKEN
 # Put Triton on a non-NFS directory
 export TRITON_CACHE_DIR=/tmp/$USER/triton_cache
