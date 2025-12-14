@@ -1,0 +1,343 @@
+[
+    {
+        "question": "According to IHL, when should the search for, collection, and evacuation of the dead be carried out?",
+        "raw_response": "<answer>A, D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According customary IHL, who is responsible for the search for and collection of the dead?",
+        "raw_response": "<answer>D</answer>\n\nExplanation: According to customary IHL, States have the primary responsibility for the search for and collection of the dead. However, they may also seek the support of humanitarian organizations, including the ICRC, in carrying out these tasks. Therefore, the correct answer is States, with the support of humanitarian organizations.",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following actions constitute violations of IHL?",
+        "raw_response": "<answer>A, B, C, D</answer>\n\nExplanation:\n\nA) Carrying the dead away from the place where they died, since they should be buried in the theatre of hostilities where they fell, is a violation of IHL. This is because it disrupts the identification process of the deceased and can cause distress to their families.\n\nB) Despoiling or pillaging the dead, unless such an action effectively contributes to the military operations of a party to the conflict - in which case despolling would be allowed, is a violation of IHL. This is because it is considered looting and is prohibited under IHL.\n\nC) Despoiling the dead or pillaging their personal belongings, regardless of the objects' nature, is a violation of IHL. This is because it is considered looting and is prohibited under IHL.\n\nD) Mutilating the bodies of the deceased is a violation of IHL. This is because it is considered a grave breach of IHL and is prohibited under the Geneva Conventions.",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL govern the handling of human remains?",
+        "raw_response": "<answer>B</answer>\n\nExplanation:\n\nOption A is incorrect because IHL does not require collective burial.\nOption C is incorrect because IHL does not require autopsies unless it is necessary for medical or legal reasons.\nOption D is incorrect because IHL requires the same respect and protection for the dead regardless of their status.\n\nTherefore, the correct answer is option B: Each party to the conflict must take all feasible measures to prevent the dead from being despoiled. This is a fundamental principle of IHL that applies to all dead persons, regardless of their status.",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to customary IHL, who can request the return of the remains of the dead in an armed conflict?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, what are some of the duties that must be observed when returning the remains of the dead?",
+        "raw_response": "<answer>A, B, C, D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What procedures shall be followed when burying the dead during an armed conflict?",
+        "raw_response": "<answer>C</answer> They shall be kept in individual graves, unless circumstances do not permit their use. This option strikes a balance between the need for individual graves and the practicalities of the situation. If circumstances do not permit individual graves, then other options like collective graves can be considered. The other options are not entirely accurate in all circumstances. For example, while it's preferable to bury according to the rites of their own religion (Option A), it's not always possible due to the circumstances of armed conflict. Similarly, collective graves are not prohibited in all circumstances (Option B), and while it's good to group graves according to nationality (Option D), it's not always feasible or necessary.",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, when can the dead be cremated?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Do the parties to an conflict have to identify the dead under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, what kind of information about the dead must be recorded by parties to an armed conflict?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What obligations do parties to an armed conflict have under IHL regarding missing persons?",
+        "raw_response": "<answer>B</answer>\n\nExplanation:\n\nParties to an armed conflict have an obligation under International Humanitarian Law (IHL) to take all feasible measures to account for persons reported missing as a result of the armed conflict. This includes, but is not limited to, searching for and collecting information regarding missing persons, and forwarding this information to the Central Tracing Agency. Parties are also encouraged to establish and maintain a record of all missing persons, but this is not a strict obligation under IHL. The Central Tracing Agency is a neutral body that assists in the tracing of missing persons, but it is not responsible for accounting for missing persons. Finally, while it is good practice to keep a separate database of persons missing in relation to the conflict, this is not a strict obligation under IHL.",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What are persons deprived of their liberty entitled to according to IHL?",
+        "raw_response": "<answer>A,B,C</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does the duty to provide adequate food to persons deprived of their liberty remain in the event of shortages caused by the armed conflict?",
+        "raw_response": "<answer>B</answer>\n\nExplanation:\n\nThe International Committee of the Red Cross (ICRC) Customary IHL Database states that \"Parties to the conflict must provide food and drinking water to all persons deprived of their liberty for reasons related to the armed conflict.\" (Rule 102). However, it also acknowledges that parties to the conflict must take into account the means available and local conditions (Rule 103). If they are unable to provide these basic needs, they must allow humanitarian agencies to provide assistance in their place (Rule 104). Therefore, the best answer is option B.",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, what special conditions do women who have been deprived of their liberty benefit from?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What considerations must be made to prevent women from becoming victims of sexual violence during their deprivation of liberty, according to IHL?",
+        "raw_response": "<answer>B,C</answer>\n\nExplanation:\n\nAccording to IHL, special considerations must be made to prevent women from becoming victims of sexual violence during their deprivation of liberty. This includes keeping women in quarters that are separate from men, except where families are accommodated as family units, and under the supervision of women (Option B). Additionally, women should be kept only with other women, even when there is a possibility to keep them accommodated with their families, to also prevent intrafamily violence (Option C). Options A and D are not incorrect, but they do not fully address the specific considerations required to prevent sexual violence against women in deprivation of liberty.",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, what rules must be observed when detaining children?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to customary IHL, where must detention centers be located?",
+        "raw_response": "<answer>C</answer> Both internment and detention centers must be removed from the combat zone.\n\nExplanation:\n\nCustomary IHL requires that internment and detention centers be removed from the combat zone. This is to protect the detainees from the dangers of hostilities and to prevent the centers from being used as military objectives. This rule applies regardless of whether the detainees have previously taken part in hostilities or whether the centers accommodate only civilian internees.\n\nOption A is incorrect because it suggests that detention centers for detainees who have previously taken part in hostilities can be located in the combat zone.\n\nOption B is incorrect because it suggests that detention centers for civilian internees only can be located in the combat zone.\n\nOption D is incorrect because it suggests that the location of internment and detention centers depends on the structure available before the hostilities begin. While it is true that parties to the conflict often use common prison facilities for detention and internment purposes, the location of these facilities must still be removed from the combat zone.",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A soldier from State A, wearing the uniform of State B, infiltrated enemy lines for reconnaissance purposes, and was subsequently captured. What is his status under IHL?",
+        "raw_response": "<answer>B</answer>\n\nExplanation:\n\nThe soldier is a member of the armed forces of State A and was engaged in a reconnaissance mission in enemy territory. This mission is considered a lawful military activity. Even though he was wearing the uniform of State B, he is still considered a member of State A's armed forces. Therefore, he benefits from combatant status and if captured, is considered a prisoner of war.\n\nOption A is incorrect because the soldier was not engaging in espionage, but rather a lawful military activity.\n\nOption C is incorrect because the soldier has not lost his prisoner of war status.\n\nOption D is incorrect because the soldier is not an unlawful combatant, as he is a member of the armed forces and was engaged in a lawful military activity.",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What conditions does customary IHL set concerning the premises where persons deprived of their liberty will be held?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What are the obligations regarding the personal belongings of persons deprived of their liberty in an armed conflict?",
+        "raw_response": "<answer>C,D</answer>\n\nExplanation:\n\nOption C is correct because persons deprived of their liberty shall be allowed to retain their personal belongings, which are protected from pillage. This is based on the Third Geneva Convention, Article 17, which states that \"prisoners of war are entitled to retain articles of a purely personal and sentimental value, as also religious objects and books.\"\n\nOption D is also correct because objects which can pose security threats or other similar concerns may be destroyed or disposed of by the detaining power. This is based on the Third Geneva Convention, Article 18, which states that \"prisoners of war may not be deprived of any articles necessary to their health, their religious or their personal needs.\" However, if an article is used in an attempt to escape or commit a hostile act, it may be retained by the Detaining Power.\n\nOptions A and B are incorrect because personal belongings cannot be kept, used, or sold by the power detaining them, and only personal belongings with emotional value to the person deprived of liberty shall not necessarily be properly kept and returned at the moment of release.",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, can a detaining power take objects belonging to persons deprived of their liberty because they could be used in military operations?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A patrol from State X's unit has captured an enemy soldier from State Y. Taking him along would endanger the patrol\u2019s mission and safety. Were he to be abandoned, he could disclose the patrol\u2019s presence. The patrol leader kills the prisoner. Was this lawful under IHL?",
+        "raw_response": "<answer>B</answer>\n\nExplanation:\n\nThe act of killing an enemy soldier who is in your custody is absolutely prohibited under International Humanitarian Law (IHL), also known as the Law of Armed Conflict. This is because the prisoner is no longer a combatant and is entitled to protection as a prisoner of war. The prohibition against killing prisoners of war cannot be justified on the basis of military necessity. Therefore, the patrol leader committed a war crime.\n\nOption A is correct because the patrol members would be criminally responsible for violating IHL if they fail to report the incident or to initiate proper legal steps.\n\nOption C is incorrect because the requirements of military necessity have not been met in this case. Military necessity does not justify the killing of a prisoner of war.\n\nOption D is incorrect because the decision to kill the prisoner was unlawful and the patrol leader should have instead released him.",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, are parties to a conflict obliged to record the personal details of persons deprived of their liberty?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, is the duty to record the personal details of persons deprived of their liberty applicable in all armed conflicts?",
+        "raw_response": "<answer>D</answer>\n\nExplanation:\n\nThe duty to record the personal details of persons deprived of their liberty is a customary rule of international humanitarian law (IHL) applicable in both international and non-international armed conflicts. It applies to all parties to the conflict, including state armed forces and non-state armed groups.\n\nReference:\n\nICRC Customary IHL Study, Rule 130: Recording of personal details of persons deprived of their liberty.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule130\n\nICRC Customary IHL Study, Rule 131: Recording of personal details of persons deprived of their liberty in non-international armed conflicts.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule131\n\nICRC Customary IHL Study, Rule 132: Recording of personal details of persons deprived of their liberty in international armed conflicts.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule132\n\nICRC Customary IHL Study, Rule 133: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol I.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule133\n\nICRC Customary IHL Study, Rule 134: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol II.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule134\n\nICRC Customary IHL Study, Rule 135: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol III.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule135\n\nICRC Customary IHL Study, Rule 136: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol IV.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule136\n\nICRC Customary IHL Study, Rule 137: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol I, Article 75.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule137\n\nICRC Customary IHL Study, Rule 138: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol II, Article 5.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule138\n\nICRC Customary IHL Study, Rule 139: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol III, Article 10.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule139\n\nICRC Customary IHL Study, Rule 140: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol IV, Article 10.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule140\n\nICRC Customary IHL Study, Rule 141: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol I, Article 76.\nhttps://ihl-databases.icrc.org/customary-ihl/eng/docs/v1_rul_rule141\n\nICRC Customary IHL Study, Rule 142: Recording of personal details of persons deprived of their liberty in international armed conflicts: Additional Protocol II, Article 6.\nhttps://ihl-databases.icrc.org/customary-",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State Y and Z are engaged in an armed conflict. A soldier from State Y, wearing the camouflage uniform of his country\u2019s\narmed forces, is captured while gathering intelligence on State Z's troop movements. An interrogating officer from State Z tells the soldier that he will be treated as a spy and has no prisoner of war status. According to IHL, what treatment is the captured soldier entitled to?",
+        "raw_response": "<answer>D</answer>\n\nExplanation:\n\nMembers of the armed forces in uniform who obtain intelligence in the enemy zone of operation are not spies. The soldier's reconnaissance was a lawful combat activity and he is entitled to prisoner of war status upon capture.\n\nThis is based on the Geneva Convention III, Article 4(A)(4) which states that \"Members of other militias and members of other volunteer corps, including those of organized resistance movements, belonging to a Party to the conflict and operating in or outside their own territory, even if this territory is occupied, provided that such militias or volunteer corps, including such organized resistance movements, fulfill the following conditions:\n(a) that of being commanded by a person responsible for his subordinates;\n(b) that of having a fixed distinctive sign recognizable at a distance;\n(c) that of carrying arms openly;\n(d) that of conducting their operations in accordance with the laws and customs of war.\"\n\nThe soldier was wearing the camouflage uniform of his country\u2019s armed forces, which is a uniform, and was operating in the enemy zone of operation, which is a lawful combat activity. Therefore, he is entitled to prisoner of war status.",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Do detaining authorities have an obligation to allow the ICRC to access persons deprived of their liberty in an armed conflict?",
+        "raw_response": "<answer>D</answer>\n\nExplanation:\n\nIn both international and non-international armed conflicts, parties to the conflict must allow the ICRC to access all persons deprived of their liberty. This is based on the Third Geneva Convention (Article 126) for international armed conflicts and the Second Additional Protocol (Article 5) for non-international armed conflicts. The ICRC's role is to protect and assist those affected by armed conflicts and other situations of violence, and it has a unique mandate to carry out these activities.",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What rights must the ICRC be accorded for them to conduct their visits in armed conflicts?",
+        "raw_response": "<answer>A,B,C,D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the obligation to respect and ensure respect under IHL entail?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    }
+]

@@ -153,7 +153,7 @@ def query_llm(prompt, model_path, max_new_tokens=512, temperature=0.2):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--index-dir", type=str, required=True)
+   parser.add_argument("--index-dir", type=str, required=True)
     parser.add_argument("--embedding-model", type=str, default="BAAI/bge-large-en")
     parser.add_argument("--llm-model", type=str, required=True)
     parser.add_argument("--question", type=str, required=True)

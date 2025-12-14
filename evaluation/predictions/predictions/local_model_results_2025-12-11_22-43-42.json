@@ -1,0 +1,112 @@
+[
+    {
+        "question": "According to IHL, when should the search for, collection, and evacuation of the dead be carried out?",
+        "raw_response": "To answer this question, let's break down the options and compare them to the principles of International Humanitarian Law (IHL) regarding the search for, collection, and evacuation of the dead.\n\nOption A states: \"Whenever circumstances permit, and particularly after an engagement, all parties involved in the conflict must, without delay, search for the dead, without adverse distinction.\" This aligns with the principles of IHL, which emphasizes the importance of searching for and collecting the dead without delay, particularly after an engagement. This option also mentions that the search should be carried out without adverse distinction, which is a fundamental principle of IHL.\n\nOption B states: \"After the general close of military operations, parties must employ all efforts to search for, collect and evacuate the dead.\" This option is not entirely accurate, as IHL requires the search for, collection, and evacuation of the dead to be carried out without delay, particularly after an engagement. It does not specify that this should only be done after the general close of military operations.\n\nOption C states: \"After an engagement, every party to the conflict must collect its own dead, as every party is only responsible for the members of its own armed forces.\" This option is not entirely accurate, as IHL requires all parties to the conflict to search for, collect, and evacuate the dead without delay, particularly after an engagement. It does not specify that each party is only responsible for collecting its own dead.\n\nOption D states: \"As soon as circumstances permit, especially after an engagement, all parties must search for the dead through all possible measures, including by allowing humanitarian organizations to do so.\" This option is similar to Option A, but it does not explicitly mention that the search should be carried out without adverse distinction.\n\nConsidering the principles of IHL, the best options are A and D, as they both emphasize the importance of searching for, collecting, and evacuating the dead without delay, particularly after an engagement, and without adverse distinction. However, since Option A is more comprehensive and accurate, the final answer is:\n\n<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According customary IHL, who is responsible for the search for and collection of the dead?",
+        "raw_response": "To answer this question, let's consider the principles of customary International Humanitarian Law (IHL) regarding the search for and collection of the dead. \n\nCustomary IHL is based on state practice and opinio juris, which are the principles and rules that are widely accepted and followed by states. In this case, the search for and collection of the dead is a humanitarian obligation that is essential for the dignity of the deceased and their families.\n\nThe Geneva Conventions and their Additional Protocols, which are the primary sources of IHL, do not explicitly state who is responsible for the search for and collection of the dead. However, they do provide guidance on the general principles and procedures to be followed.\n\nAccording to Article 15 of the First Geneva Convention, the Parties to the conflict must search for the dead and prevent their being despoiled. This implies that all parties to the conflict have a responsibility to search for the dead and prevent their being despoiled.\n\nHowever, the Geneva Conventions also recognize the role of the International Committee of the Red Cross (ICRC) and other humanitarian organizations in assisting the Parties to the conflict in fulfilling their humanitarian obligations. The ICRC has a long history of providing assistance in the search for and collection of the dead, and it is widely recognized as the primary humanitarian organization responsible for this task.\n\nTherefore, based on the principles of customary IHL and the Geneva Conventions, the most accurate answer is that all parties to the conflict have a responsibility to search for and collect the dead, but they may also receive support from humanitarian organizations such as the ICRC.\n\n<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following actions constitute violations of IHL?",
+        "raw_response": "To answer this question, let's analyze each option step by step according to the principles of International Humanitarian Law (IHL).\n\nA) Carrying the dead away from the place where they died, since they should be buried in the theatre of hostilities where they fell.\n- This statement is incorrect. IHL does not require the dead to be buried in the theatre of hostilities where they fell. In fact, it is recommended to bury the dead as soon as possible, but it is not necessary to do so in the exact location where they died. This option is not a violation of IHL.\n\nB) Despoiling or pillaging the dead, unless such an action effectively contributes to the military operations of a party to the conflict - in which case despolling would be allowed.\n- This statement is incorrect. IHL prohibits the despoliation of the dead, regardless of whether it contributes to military operations. This option is a violation of IHL.\n\nC) Despoiling the dead or pillaging their personal belongings, regardless of the objects' nature.\n- This statement is correct. IHL prohibits the despoliation of the dead, including the removal of personal belongings. This option is a violation of IHL.\n\nD) Mutilating the bodies of the deceased.\n- This statement is correct. IHL prohibits the mutilation of the dead. This option is a violation of IHL.\n\nBased on the analysis, options B, C, and D are violations of IHL. Therefore, the correct answer is:\n\n<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL govern the handling of human remains?",
+        "raw_response": "To answer this question, let's consider each option in relation to the rules of International Humanitarian Law (IHL) regarding the handling of human remains.\n\nA) The dead must be buried in a collective grave regardless of identification status.\n- This option is not entirely accurate. While IHL does require the dead to be buried, it does not specify that they must be buried in collective graves. In fact, IHL encourages the identification of the dead, and collective graves are only permitted if identification is not possible.\n\nB) Each party to the conflict must take all feasible measures to prevent the dead from being despoiled.\n- This option is accurate. IHL requires parties to a conflict to take all feasible measures to prevent the dead from being despoiled, including the removal of personal effects and the mutilation of bodies.\n\nC) Parties to a conflict are required to conduct an autopsy on all deceased individuals to determine the cause of death.\n- This option is not entirely accurate. While IHL does permit autopsies, it does not require them. Autopsies are only permitted if they are necessary for the identification of the dead or to determine the cause of death.\n\nD) The dead must be buried, but only if they are identified as members of the armed forces of a party to the conflict.\n- This option is not accurate. IHL requires the dead to be buried, regardless of their status as members of the armed forces. The only exception is if the dead are to be cremated, which is only permitted if identification is not possible.\n\nConsidering the above, the best options are:\n<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to customary IHL, who can request the return of the remains of the dead in an armed conflict?",
+        "raw_response": "To answer this question, let's break it down step by step:\n\n1. Customary IHL refers to the unwritten rules of international humanitarian law that are widely accepted and followed by states and other parties to an armed conflict. It is not codified in a single treaty, but rather is derived from the consistent practice of states and other parties over time.\n\n2. The question asks who can request the return of the remains of the dead in an armed conflict. This is a key aspect of IHL, as it provides a way for families to recover the remains of their loved ones and to give them a proper burial.\n\n3. The correct answer must be consistent with the principles of IHL, which emphasize the importance of treating the dead with dignity and respect. It must also be consistent with the practice of states and other parties to armed conflicts.\n\n4. Option A states that the party to which the deceased belonged, including organized armed groups during a non-international armed conflict, can request the return of the remains. This is consistent with the principles of IHL, which emphasize the importance of treating the dead with dignity and respect. It is also consistent with the practice of states and other parties to armed conflicts, as many have requested the return of the remains of their soldiers and civilians.\n\n5. Option B states that the party to which the deceased belonged or their next of kin can request the return of the remains, but only during international armed conflicts. This is inconsistent with the principles of IHL, which emphasize the importance of treating the dead with dignity and respect in all armed conflicts. It is also inconsistent with the practice of states and other parties to armed conflicts, as many have requested the return of the remains of their soldiers and civilians in non-international armed conflicts.\n\n6. Option C states that friends and family of the deceased can request the return of the remains. This is inconsistent with the principles of IHL, which emphasize the importance of treating the dead with dignity and respect. It is also inconsistent with the practice of states and other parties to armed conflicts, as the party to which the deceased belonged or their next of kin are generally the ones who request the return of the remains.\n\n7. Option D states that the party to which the deceased belonged or their next of kin can request the return of the remains in both international and non-international armed conflicts. This is consistent with the principles of IHL, which emphasize the importance of treating the dead with dignity and respect in all armed conflicts. It is also consistent with the practice of states and other parties to armed conflicts, as many have requested the return of the remains of their soldiers and civilians in both international and non-international armed conflicts.\n\nBased on the above analysis, the correct answer is:\n\n<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, what are some of the duties that must be observed when returning the remains of the dead?",
+        "raw_response": "To answer this question, let's consider the duties related to returning the remains of the dead according to International Humanitarian Law (IHL). \n\nFirst, IHL requires that the remains of the dead be respected and properly disposed of. This includes facilitating the return of the remains, be it bodies or ashes, which is mentioned in option A. This is a fundamental principle of IHL, as it allows families to properly mourn and bury their loved ones.\n\nOption B mentions returning the personal effects of the deceased together with their remains. This is also a requirement under IHL, as it allows families to properly identify and bury their loved ones.\n\nOption C states that the remains of the dead must be identified before repatriation. This is also a requirement under IHL, as it ensures that the remains are properly identified and returned to the correct families.\n\nOption D mentions returning the remains of all members of the same religious and social groups together. While this is not explicitly mentioned in IHL, it is a common practice to return the remains of people from the same community together, as it is often culturally and religiously significant.\n\nConsidering the above points, the best options are A, B, and C. These options are all explicitly mentioned in IHL as requirements for returning the remains of the dead.\n\n<answer>A,B,C</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What procedures shall be followed when burying the dead during an armed conflict?",
+        "raw_response": "To answer this question, I will consider the relevant rules of international humanitarian law (IHL) regarding the burial of the dead during an armed conflict. \n\nFirst, I will consider option A: \"If possible, they shall be buried in accordance with the rites of their own religion.\" This option aligns with Article 34 of the 1949 Geneva Convention III, which states that \"the dead shall be respected; they shall be buried, if possible according to the rites of the religion to which they belonged, and in accordance with any other rites or practices which they may have professed.\" Therefore, option A is correct.\n\nNext, I will consider option B: \"They shall be kept in individual graves, as collective graves are prohibited by IHL in all circumstances.\" This option is incorrect because Article 17 of the 1949 Geneva Convention III allows for the use of collective graves in certain circumstances, such as when individual graves are not feasible due to the number of dead. However, the article also requires that the dead be identified by name, rank, and regimental number, and that the graves be marked with a permanent cross or other distinctive emblem indicating the presence of the dead.\n\nI will now consider option C: \"They shall be kept in individual graves, unless circumstances do not permit their use.\" This option is correct because it reflects the requirement in Article 17 of the 1949 Geneva Convention III that the dead be buried in individual graves, unless circumstances do not permit their use. This option is consistent with the rules of IHL regarding the burial of the dead during an armed conflict.\n\nFinally, I will consider option D: \"When possible, graves should be grouped according to the nationality of the deceased.\" This option is incorrect because it is not a requirement of IHL. While it may be desirable to group graves according to the nationality of the deceased, this is not a requirement of the Geneva Conventions.\n\nBased on the above analysis, the correct options are A and C.",
+        "predicted": [],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, when can the dead be cremated?",
+        "raw_response": "To answer this question, I will consider the relevant provisions of International Humanitarian Law (IHL) regarding the treatment of the dead. \n\nAccording to Article 17 of the 1949 Geneva Convention I, \"The dead shall be respected; they shall not be the object of vicious or contemptuous acts which are motivated by sentiments of hatred or revenge.\" However, this article does not explicitly address the issue of cremation.\n\nArticle 15 of the 1949 Geneva Convention I states that \"The remains of persons who have died for reasons related to the armed conflict, or those who have died as a result of wounds or disease sustained in the armed conflict, shall be respected, subject to the provisions of the present Convention. They shall not be the object of vicious or contemptuous acts.\" Again, this article does not explicitly address the issue of cremation.\n\nHowever, Article 15 also states that \"In so far as military considerations permit, the remains of the deceased shall be buried in individual graves marked by the name, rank, date of death and regimental, personal or serial number of the deceased person.\" This implies that cremation is not prohibited, but it is not explicitly permitted either.\n\nArticle 34 of the 1977 Additional Protocol I states that \"The dead shall be respected; they shall not be the object of vicious or contemptuous acts which are motivated by sentiments of hatred or revenge. They shall be buried, if possible according to the rites of the religion to which they belonged, or else according to the rites of the next of kin. Subject to further instructions from a competent authority, duly accredited, usually the officer commanding the armed forces in the field, proper arrangements shall be made for grave registration, recording and marking so that the dead may be identified.\" This article also does not explicitly address the issue of cremation.\n\nHowever, Article 34 also states that \"In exceptional circumstances, namely because of imperative reasons of hygiene or on account of the religion of the deceased, cremation may be carried out under proper conditions.\" This provision explicitly permits cremation in exceptional circumstances.\n\nTherefore, the correct answer is <answer>B</answer>.",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Do the parties to an conflict have to identify the dead under IHL?",
+        "raw_response": "To answer this question, let's break it down step by step:\n\n1. The Geneva Conventions and their Additional Protocols do not explicitly state that parties to a conflict must identify the dead. However, they do require that the dead be respected and properly disposed of (e.g., Geneva Convention I, Article 17; Geneva Convention II, Article 120; Geneva Convention III, Article 130; Geneva Convention IV, Article 130; Additional Protocol I, Article 34).\n\n2. The obligation to identify the dead is not explicitly stated as an obligation of result, but rather as an obligation of means. This means that parties to a conflict must make every possible effort to identify the dead, but it is not a strict obligation to achieve a specific result.\n\n3. The obligation to identify the dead is not limited to States. Non-State actors, such as armed groups, also have this obligation under international humanitarian law (IHL).\n\nBased on these considerations, the correct answer is:\n\n<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    }
+]
