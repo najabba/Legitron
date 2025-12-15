@@ -1,0 +1,5498 @@
+[
+    {
+        "question": "According to IHL, when should the search for, collection, and evacuation of the dead be carried out?",
+        "raw_response": "<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According customary IHL, who is responsible for the search for and collection of the dead?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following actions constitute violations of IHL?",
+        "raw_response": "<answer>A, B, C, D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL govern the handling of human remains?",
+        "raw_response": "<answer>B,D</answer>",
+        "predicted": [
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to customary IHL, who can request the return of the remains of the dead in an armed conflict?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, what are some of the duties that must be observed when returning the remains of the dead?",
+        "raw_response": "<answer>A,B,C</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What procedures shall be followed when burying the dead during an armed conflict?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, when can the dead be cremated?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Do the parties to an conflict have to identify the dead under IHL?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, what kind of information about the dead must be recorded by parties to an armed conflict?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What obligations do parties to an armed conflict have under IHL regarding missing persons?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What are persons deprived of their liberty entitled to according to IHL?",
+        "raw_response": "<answer>A,B,C</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does the duty to provide adequate food to persons deprived of their liberty remain in the event of shortages caused by the armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, what special conditions do women who have been deprived of their liberty benefit from?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What considerations must be made to prevent women from becoming victims of sexual violence during their deprivation of liberty, according to IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, what rules must be observed when detaining children?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to customary IHL, where must detention centers be located?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A soldier from State A, wearing the uniform of State B, infiltrated enemy lines for reconnaissance purposes, and was subsequently captured. What is his status under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What conditions does customary IHL set concerning the premises where persons deprived of their liberty will be held?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What are the obligations regarding the personal belongings of persons deprived of their liberty in an armed conflict?",
+        "raw_response": "<answer>C,D</answer>\n\nExplanation:\n\nOption C is correct because persons deprived of their liberty shall be allowed to retain their personal belongings, which are protected from pillage. This is based on Article 18 of the Fourth Geneva Convention, which states that \"Family honor and rights, the lives of persons, and private property, as well as religious convictions and practice, must be respected.\"\n\nOption D is also correct because objects",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, can a detaining power take objects belonging to persons deprived of their liberty because they could be used in military operations?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A patrol from State X's unit has captured an enemy soldier from State Y. Taking him along would endanger the patrol\u2019s mission and safety. Were he to be abandoned, he could disclose the patrol\u2019s presence. The patrol leader kills the prisoner. Was this lawful under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, are parties to a conflict obliged to record the personal details of persons deprived of their liberty?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, is the duty to record the personal details of persons deprived of their liberty applicable in all armed conflicts?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State Y and Z are engaged in an armed conflict. A soldier from State Y, wearing the camouflage uniform of his country\u2019s\narmed forces, is captured while gathering intelligence on State Z's troop movements. An interrogating officer from State Z tells the soldier that he will be treated as a spy and has no prisoner of war status. According to IHL, what treatment is the captured soldier entitled to?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Do detaining authorities have an obligation to allow the ICRC to access persons deprived of their liberty in an armed conflict?",
+        "raw_response": "<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What rights must the ICRC be accorded for them to conduct their visits in armed conflicts?",
+        "raw_response": "<answer>A,B,C,D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the obligation to respect and ensure respect under IHL entail?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, who bears the obligation to respect and ensure respect of IHL rules?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does respect for IHL depend on reciprocity?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During recent engagements an infantry company commander expressed dissatisfaction with the small arms ammunition on issue. His subordinates suggest that the ammunition be altered. Which of the following options would be lawful under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, is it mandatory for States to have legal advisers in their armed forces?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, which of the following statements is correct?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According customary IHL, instruction in IHL within armed forces:",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the obligation for States and parties to an armed conflict to provide instruction in IHL to their armed forces entail?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does customary IHL say about teaching IHL to civilians?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under customary IHL, the obligation to encourage the teaching of IHL to the civilian popualtion:",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, is ensuring respect for IHL an erga omnes obligation?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following statements accurately reflects the position of IHL on the role of third States ensuring respect for IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, how may States lawfully put pressure on parties to an armed conflict to respect IHL?",
+        "raw_response": "<answer>A,C,D</answer>",
+        "predicted": [
+            "A",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, which of the following statements is NOT a condition for lawful belligerent reprisals?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Why are States reluctant to resort to belligerent reprisals in armed conflicts?",
+        "raw_response": "<answer>A,B,C,D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL prohibit reprisals against the civilian population?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL:",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does  IHL prohibit reprisals in non-international armed conflicts?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does IHL say about reprisals against protected objects?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "When is a State responsible for violations of IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Is a State responsible for violations of IHL committed through acts that went against its instructions?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL:",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How are denials of quarter addressed under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Are there situations that can support a \"no quarter\" order in an armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Is the prohibition on denial of quarter applicable in all armed conflicts?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what circumstances can a person be recognized as hors de combat in an armed conflict?",
+        "raw_response": "<answer>A, C, D</answer>",
+        "predicted": [
+            "A",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, what are the obligations regarding the treatment of persons hors de combat? ",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What actions can lead a person hors de combat to lose their protection under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Two soldiers from State X who are carrying a wounded soldier are retreating to their own lines while under attack from soldiers from State Y. Is the continued attack from State Y's soldiers a violation of IHL?",
+        "raw_response": "<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following actions would not comply with the IHL prohibition against attacking persons parachuting from an aircraft?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Can parties to an armed conflict seize military equipment belonging to an adverse party?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, what rules apply to the war booty of medical units?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to customary IHL, under what circumstances is the seizure of an adversary's property not prohibited? ",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Can parties to an armed conflict destroy the property of an adversary in a military operation?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, can private property in occupied territory ever be confiscated or destroyed?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In cases of occupation and according to IHL, what rules must an occupying power comply with regarding public property?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following acts amount to pillage under IHL?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, what kinds of property may not be pillaged?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Can parties to an armed conflict ever use starvation as a method of warfare?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, may a city under the control of insurgents but populated by civilians be subjected to a naval blockade that leads to starvation?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What IHL rules apply to objects indispensable to the survival of the civilian population?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "When is the use of 'scorched earth policy' not prohibited under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under customary IHL, what are the conditions for granting humanitarian relief for civilians in need?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which parties or organizations are authorized to provide humanitarian relief for populations in need, according to customary IHL?",
+        "raw_response": "<answer>A,B,C,D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What are the obligations of the parties to the conflict regarding humanitarian relief personnel, under customary IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In what circumstances may the freedom of movement granted to humanitarian relief personnel be limited under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Are ruses of war prohibited under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Rebel forces have secured the northern part of State A. Two villages on the new border between State A and the rebels are being terrorized and used as a jump-off point for rebel operations against State A's forces. What options are open to State A's military commander under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What protection does IHL offer to medical personnel as such?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How do medical personnel lose their special protection under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Can a party to an armed conflict punish a person for disobeying an order to perform an act that would be contrary to medical ethics?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following statements accurately describes the position of IHL on medical secrecy?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL protect religious personnel?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements concerning religious personnel is correct under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL protect medical units?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL define medical units?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In which of the following cases would a hospital lose its special protection under IHL?",
+        "raw_response": "<answer>A, D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements concerning medical transports is true accrording to IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "When do medical trasports lose protection as such under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL address the display of the distinctive emblems? ",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL protect humanitarian relief personnel?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How does IHL protect humanitarian relief personnel?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL protect humanitarian relief objects?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under what conditions does IHL protect personnel and objects involved in a peacekeeping mission?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How does IHL protect journalists?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What is the difference between a civilian journalist and a war correspondent under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What conditions must be met for a hospital zone to enjoy protection as a protected area under IHL? ",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What is a neutralized zone\u2019s primary purpose in an armed conflict? ",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What actions concerning demilitarised zones are prohibited under IHL?",
+        "raw_response": "<answer>A,C,D</answer>",
+        "predicted": [
+            "A",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What actions can lead a demilitarized zone to lose its protection as such under IHL?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, what conditions make a town or locality non-defended? ",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What primary legal consequence flows from the declaration of a locality as non-defended under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, which of the following statements accurately reflects the protection afforded to cultural property during armed conflict? ",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following actions would constitute a violation of the protection afforded to cultural property under IHL? ",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what circumstances does customary IHL allow for the use of property of great importance to the cultural heritage of every people for purposes which are likely to expose it to destruction or damage? ",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following actions do not constitute a violation of customary IHL in relation to the protection of cultural property of great importance to the cultural heritage of peoples?",
+        "raw_response": "<answer>A,C,D</answer>",
+        "predicted": [
+            "A",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the obligation to respect cultural property entail for parties to an armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following statements do not accurately reflect the protection afforded to cultural property under customary IHL during armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, what obligations does an occupying power have in relation to cultural property in occupied territory?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, what should an occupying power do if cultural property has been illegally removed from the occupied territory?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "When are attacks against works and installations containing dangerous forces not prohibited under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, which of the following measures must be taken in relation to installations that contain dangerous forces?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what circumstances may the natural environment be attacked during armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "When are attacks against the natural environment prohibited in an armed conflict?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What are parties to an armed conflict required to do, concerning the natural environment, during military operations?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL address situations where there is uncertainty about the environmental impact of military operations?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does customary IHL regulate the use of methods or means of warfare when it comes to the protection of the natural environment?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to customary IHL, how should the natural environment be treated in the context of armed conflicts?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What is the earliest instrument to have mentioned the prohibition of the use of means and methods of warfare which are of a nature to cause superfluous injury or unnecessary suffering?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How is unnecessary suffering understood under  IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What is an example of a weapon that would not fall under the prohibition of weapons that cause superfluous injury and unnecessary suffering under  IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under  IHL, what makes a weapon indiscriminate in nature?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A platoon responsible for an occupied enemy village suddenly comes under fire and one of the commanders is shot and killed. Members of the platoon manage to round up all the civilians and conduct a house-to-house search but cannot find any weapons and do not know who fired at them. The soldiers want to threaten the civilians to get information about the perpetrator. What options are open to the platoon commander?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What are some examples of weapons that have been described as indiscriminate in all or certain contexts?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What are some examples of case law of international courts that have directly dealt with the prohibition of indiscriminate weapons?",
+        "raw_response": "<answer>A,B</answer>\n\nExplanation:\n\nThe Nuclear Weapons case (Advisory Opinion) before the International Court of Justice (ICJ) dealt with the legality of the threat or use of nuclear weapons. Although not explicitly about indiscriminate weapons, the Court's findings on the principle of distinction and the prohibition of weapons of a nature to cause superfluous injury or unnecessary suffering are relevant to the prohib",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which kinds of weapons does the prohibition of the use of poison apply to?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What are some weapons that fall under the prohibition of the use of poison as a means of warfare under  IHL?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under  IHL, during which situations may biological weapons be used?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does customary IHL say about the development and possession of biological weapons?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During which situations may chemical weapons be used in the context of an armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In which international criminal law case did judges find that the prohibition of chemical weapons also applies to non-international armed conflicts?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What is one of the chief reasons that has inspired the prohibition of riot control agents as a means of warfare under IHL?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under customary IHL, what are the conditions under which herbicides are prohibited as a means of warfare?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which obligation under IHL motivated the explicit prohibition of the use of expanding bullets in armed conflicts?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Why are expanding bullets still adopted for domestic law enforcement purposes in some countries?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How should parties to an armed conflict apply the principle of distinction between civilians and combatants?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL prohibit the terrorizing of the civilian population?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How are combatants defined under IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, can armed forces have non-combatant members?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How are armed forces defined under IHL?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How are civilians defined under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "To what extent do civilians enjoy protection from attack in an armed conflict?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does the principle of distinction apply to civilian and military objectives in armed conflict?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How are military objectives defined in IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How are civilian objects defined according to IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "When do civilian objects lose protection from attack in an armed conflict?",
+        "raw_response": "<answer>B,D</answer>",
+        "predicted": [
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How are indiscriminate attacks regulated under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How are indiscriminate attacks defined under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "To what extent is area bombardment prohibited in IHL?",
+        "raw_response": "<answer>C,B</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In an armed conflict, what does abiding by the principle of proportionality in attack entail?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In an armed conflict, what does abiding by the principle of precautions in attack in entail?",
+        "raw_response": "<answer>B,D</answer>",
+        "predicted": [
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL rule on target verification entail?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL duty to take all feasible precautions in the choice of means and methods of warfare prescribe?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL obligation to assess the effects of attack entail?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the IHL obligation to cancel or suspend an attack require?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL obligation to give effective advance warning prior to an attack entail?",
+        "raw_response": "<answer>B,D</answer>",
+        "predicted": [
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL rule on target selection prescribe?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the IHL requirement to take precautions against the effects of attacks include?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, how is the feasibility of the precautions to be taken assessed, and what if the defender is not able to or does not take any precautions to protect civilians under its control?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the duty to avoid locating military objectives within or near densely populated areas entail under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the duty to remove civilian persons and objects from the vicinity of military objectives entail?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the requirement of humane treatment for civilians and persons hors de combat entail under IHL? ",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the IHL prohibition of adverse distinction entail?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL prohibition of murder entail?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL prohibition of torture entail?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the IHL prohibition of corporal punishment entail?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the IHL prohibition of mutilation, medical or scientific experiments entail?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL prohibition of rape entail?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL prohibition of slavery entail?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what does the prohibition of forced labour entail?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, what does the prohibition of hostage-taking entail?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what does the prohibition of using human shields entail?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, what does the prohibition of enforced disappearance entail?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, what does the prohibition of arbitrary deprivation of liberty entail?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what does the right to fair trial entail?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL principle of legality entail?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, what does the requirement of individual criminal responsibility entail?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the prohibition of collective punishment entail under IHL?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the requirement of respect for the convictions and religious practices of civilians and hors de combat entail?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL obligation to respect family rights entail?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the IHL duty of combatants to distinguish themselves from the civilian population entail?",
+        "raw_response": "<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the IHL rule that combatants engaged in espionage have no right to prisoner-of-war status and may be tried entail?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL define the status of mercenaries?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What does the duty to collect wounded, sick, and shipwrecked without distinction entail in armed conflict?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the duty to care for the wounded, sick, and shipwrecked entail in armed conflict?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the obligation to take all possible measures to protect the wounded, sick and shipwrecked from pillage and ill-treatment prescribe in IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it is always permissible to:",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the implications of transnational terrorism on IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the deliberate targeting of humanitarian personnel during armed conflicts?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a conflict in a region with significant ethnic tensions, State X deploys its military forces to secure key civilian infrastructure while a non-state armed group with alleged political motives intensifies its attacks on civilian targets. State X unilaterally declares the group as outside the scope of IHL protections due to their 'terrorist methods'. In this scenario, which approach to IHL is most aligned with legal standards?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of an international armed conflict, a group of civilians from State X has been documented to occasionally sabotage communication lines used by State Y's military. How should the civilians from State X be treated under IHL during their acts of sabotage?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the targeting of civilians who are allegedly providing logistic support to combatants in an armed conflict?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the targeting of civilian objects in cases where they serve a dual-use function, such as providing military communications?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of enhanced interrogation techniques that involve ill-treatment during armed conflicts?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following types of targets may meet the definition of a military objective under Article 52 (2) of Additional Protocol I to the Geneva Conventions?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL consider a dual-use object a military objective?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of the principle of proportionality under IHL, what is a crucial factor in determining whether an attack is disproportionate?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the principle of proportionality in IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following best describes the obligation of precautionary measures during attacks?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it is always permissible to:",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following scenarios would most likely involve the legal application of the Fourth Geneva Convention's rules on occupation?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a situation where State X's military forces have gained effective control over a territory of State Y without encountering armed resistance, but have not replaced  domestic civilian authorities, how should this scenario be categorized under the rules of occupation in IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of non-international armed conflicts, which of the following statements best describes the applicability of customary IHL principles concerning the conduct of hostilities?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of non-international armed conflicts, which of the following statements about the treatment of civilians who have taken a direct part in hostilities is correct under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the obligation of States under Common Article 1 of the Geneva Conventions to 'ensure respect' for IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, under Common Article 1 of the Geneva Conventions, which of the following best describes a positive obligation of States not involved in an armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements correctly reflects the obligations of States under Common Article 1 of the Geneva Conventions concerning the obligation to 'ensure respect' for IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what is a state's specific obligation under Common Article 1 of the Geneva Conventions concerning its interaction with other States involved in armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A new armed conflict erupts in Region X between State A and a coalition of non-state armed groups. Several NGOs are advocating for the establishment of a new IHL supervision mechanism to oversee compliance. However, some state actors propose reinvigorating the existing International Fact-Finding Commission (IFFC) under Article 90 of Additional Protocol I. Which of the following limitations of the IFFC could be addressed with the parties' consent?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL prohibit the imposition of criminal punishment on members of non-state armed groups merely for participating in hostilities?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "During an armed conflict involving multiple non-state armed groups, one such group occupies a school building to use as a military base. The government responds by launching an aerial attack on the structure, knowing it will likely result in civilian casualties. Which principle of IHL is directly at risk of being violated in this scenario?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the application of IHL in non-international armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the criteria for determining an international armed conflict under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following scenarios would qualify as an international armed conflict under IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, which of the following scenarios accurately reflects the classification of an armed conflict as a non-international armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of IHL, which of the following conditions must be met to classify an armed conflict as a non international armed conflict under Common Article 3?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of a non-international armed conflict which legal framework primarily governs the conduct of hostilities?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the scenario of a conflict being classified as a non-international armed conflict which legal obligation distinguishes the treatment of detained individuals under IHL from human rights law?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, in what situation can a state rightfully classify an ongoing non-international armed conflict as a 'counter-terrorism' operation, thereby negating the application of IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following scenarios accurately demonstrates the principle that the application of IHL does not affect the legal status of non-state armed groups involved in a non-international armed conflict?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, which of the following scenarios correctly illustrates the application of human rights extraterritorially during a non-international armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a non-international armed conflict, an non-State armed group detains soldiers from the national army during an incursion, moving them to a location outside the state's borders where it exerts effective control. The group argues it is not bound by human rights extraterritorially. Which of the following statements correctly reflects their obligations under IHL and human rights law?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the legal and policy considerations of extraterritorial targeting of individuals under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an ongoing non-international armed conflict, State X targets an individual who is believed to be directing hostile operations against it, but who is currently located in the territory of a non-belligerent State Y. Assuming the ius ad bellum requirements have been met, what legal framework primarily governs the lawfulness of targeting this individual under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In an ongoing non-international armed conflict, a humanitarian organization seeks to deliver food supplies to civilians in a besieged area controlled by a non-state armed group. The state government has so far denied requests for access on  grounds of national security, despite reports of starvation among the civilian population. Which statement accurately reflects the obligations of the parties under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL classify a state as an occupying power?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under the law of occupation, which of the following conditions is essential for determining the beginning of an occupation?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A multinational force operating under UN command is conducting active combat operations against a non-state armed group in a host country with the consent of the host government. During an engagement, the UN force captures several members of the non-state armed group. Under IHL, how should the captured individuals be treated, and which legal framework applies?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of IHL, which responsibility do States have when private military or security companies (PMSCs) are involved in armed conflicts?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following correctly reflects the responsibility of States regarding the operations of Private Military and Security Companies (PMSCs) during armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the application of IHL to cyber operations in armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it is  permissible to deploy new technologies of warfare if:",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what is the primary legal consideration when assessing the use of explosive weapons in densely populated areas?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the midst of an urban conflict in City Z, a military commander decides to deploy artillery shells with wide impact explosives against a fortified position allegedly held by enemy combatants, though the area is known to also contain civilian structures and inhabitants. Which of the following considerations must be made under IHL to determine the legality of this attack?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a scenario where a group of civilians is supplying weapons to a military faction during an ongoing combat operations, under what conditions do these civilians lose their protection from direct attack?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following criteria do not apply when determining if a specific act constitutes direct participation in hostilities?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under the Arms Trade Treaty, what is the primary legal criterion that States must assess before authorizing the transfer of conventional arms?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which aspect of the Arms Trade Treaty is aimed at ensuring that arms transfers do not contribute to violations of IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of non-international armed conflicts, what is a potential consequence of designating a non-state armed group as 'terrorist' under domestic and international policy frameworks?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the triggers for the applicability of IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a prolonged conflict with a non-state armed group, State X asserts that the armed confrontation has ended because a temporary ceasefire has been agreed upon, and hostilities have ceased for several weeks. However, State X continues to maintain a substantial military presence in the region for defensive purposes. When does the applicability of IHL to this non-international armed conflict cease?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Considering the territorial applicability of IHL in Non-International Armed Conflicts , under which circumstances IHL might extend to the territory of a non-belligerent State?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the relationship between IHL and counterterrorism measures?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under what conditions does IHL consider the actions of multinational forces sufficient to determine that they have become a party to a pre-existing non-international armed conflict , according to the ICRC's support-based approach to conflict classification?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a UN Peacekeeping mission, multinational forces are tasked with supporting the national military of State X in its fight against a non-state armed group. The multinational forces provide intelligence and logistical support but do not engage directly in combat. Under the ICRC's support-based approach to conflict classification, which of the following statements correctly assesses whether these multinational forces can be considered a party to the pre-existing Non-International Armed Conflict ?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the obligations of States under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the view of the ICRC,  what is required for humanitarian organizations to carry out relief operations in a territory controlled by non-State armed groups during a non-international armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL does IHL provide specific protection status for medical vehicles of the armed forces?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following scenarios would result in the loss of specific protection for medical personnel during an armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the transformation of medical objects into military objectives under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a non-international armed conflict , a raid on a hospital run by a non-state armed group reveals that the facility is being used for launching cyber-attacks against an opposing force's communication networks. Under IHL, which of the following actions is most appropriate?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In non-international armed conflicts , which of the following aspects of detention is most developed under IHL?",
+        "raw_response": "<answer>D,C,A,B</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In the context of detention during an armed conflict, which of the following reflects a significant challenge?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following statements best describes the legal review obligation for new technologies of warfare?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State Z has recently developed an advanced autonomous weapon system capable of selecting and engaging targets without human intervention. The system is equipped to operate in complex and dynamic environments. However, during a field exercise, the system engaged non-military objects due to misidentifying targets under challenging conditions. Considering this scenario, what measures should State Z prioritize to ensure compliance with IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, which of the following actions would most likely be considered a cyber attack?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of cyber operations during an armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what is the most critical factor to consider when determining the compliance of autonomous weapon systems with IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "During an urban conflict, State X uses a missile system known for its wide area effects to target a military objective situated in a densely populated area. Which of the following considerations is most critical under IHL when determining the legality of this attack?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it is always permissible to use explosive weapons in populated areas if:",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under the framework of the Arms Trade Treaty, what is one primary criterion States must assess when considering an arms transfer?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, when deciding on responsible arms transfers, which of the following criteria must a State give paramount consideration to?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State X, possessing nuclear capabilities, is considering the use of a nuclear weapon in an extreme situation where its national security is threatened. In deliberations, legal advisors argue whether this conforms with IHL. Which of the following considerations regarding the use of nuclear weapons is most aligned with IHL principles?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a complex operation in a conflict zone, State X hires a private military and security company (PMSC) to provide logistical support. The PMSC personnel, carrying weapons for protection, become involved in a skirmish that results in civilian casualties. Which of the following statements best reflects the legal obligations of State X concerning the PMSC under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an armed conflict, Country X has contracted a Private Military and Security Company (PMSC) to provide security services, including armed patrols in a conflict zone. A civilian alleges that they were injured by the PMSC personnel during one of these patrols. Which of the following responsibilities does Country X have concerning the actions of the PMSC personnel?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it is always permissible to:",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following scenarios clearly exemplifies a violation of IHL regarding the protection of medical personnel during armed conflicts?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the midst of a non-international armed conflict, State X captures members of a rival armed group after an operation in which the armed group targetted military objectives. State X labels all captured members as 'terrorists' and intends to prosecute them under national anti-terrorism laws without considering IHL protections. Which of the following interpretations of IHL reflects the applicable legal framework?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of IHL and its relationship with acts commonly labeled as terrorism, which of the following accurately describes how IHL addresses violent acts against civilians during an armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, how are acts of violence by non-state armed groups against military objectives be legally qualified in non-international armed conflicts?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In a scenario where a non-state armed group attacks a military installation of State Z during an ongoing non-international armed conflict, and State Z labels this action as 'terrorism,' which of the following assertions best aligns with IHL principles?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which is the correct distinction regarding the applicability of combatant status in armed conflicts?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of internment or administrative detention in non-international armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under the framework of IHL, which of the following principles guides the lawful application of internment or administrative detention during armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false concerning asymmetric warfare under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a conflict involving State X and a non-state armed group, State X conducts an airstrike targeting a location allegedly used for military purposes, which has been strategically positioned in an urban area amidst civilian residences. The operation results in significant civilian casualties. How should State X's adherence to the principle of proportionality be assessed in this context under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of urban warfare under IHL, which of the following actions appears compliant with the principle of proportionality?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an urban warfare scenario, a technologically inferior non-state armed group strategically takes cover in densely populated civilian areas, prompting the militarily superior state forces to reconsider their targeting strategies. Which of the following actions, according to IHL, is permissible for the state forces under these circumstances?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an ongoing non-international armed conflict, a non-state armed group embeds its operations within a densely populated urban area, closely positioning its fighters and military equipment close to or within civilian infrastructure. The state forces are planning a military operation in response. According to IHL, what is the most critical legal consideration for the state forces when planning their operation?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it is  permissible to target civilians directly if:",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following accurately describes a situation in which a civilian loses protection from direct attack?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of IHL, which of the following scenarios would most likely lead to a civilian losing their protection against direct attack?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of cluster munitions in armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following concerns does the use of cluster munitions not raise for the protection of civilians?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the International Committee of the Red Cross (ICRC)'s role in interpreting the notion of direct participation in hostilities?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the use of cluster munitions in all circumstances, and if not, under what condition might their use contravene IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does the cluster munition convention prohibit the transfer of cluster munitions under all circumstances?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the application of IHL in non-international armed conflicts?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what is a necessary element for a group to be considered a party to a non-international armed conflict, potentially subject to IHL obligations?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In assessing whether a group is sufficiently organized to be considered a party to a non-international armed conflict under IHL, which of the following factors is NOT relevant?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a region experiencing a non-international armed conflict, an armed group with a loose internal structure and a clandestine chain of command is involved. The government of the affected State refuses to acknowledge the applicability of IHL to this situation, citing that the group cannot be characterized as sufficiently organized. Which of the following statements accurately reflects the legal consideration needed to determine the applicability of IHL in this context?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL exclude that a non-state armed groups may be a party to an armed conflict if it profess adherence to IHL but operates under a clandestine chain of command?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In which of the following scenarios would non-international armed conflict rules of IHL definitively apply?",
+        "raw_response": "<answer>A,B,C</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following statements is false regarding the application of IHL in non-international armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a recent non-international armed conflict, Group Z, a loosely organized armed group, captures territory and establishes a de facto administration. Group Z claims the applicability of only its internal rules and rejects IHL insisting that they are not bound by their obligations under IHL. Which scenario best reflects the legal standing under IHL in this situation?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a non-international armed conflict, an armed group with a decentralized command structure captures several soldiers from the opposing state forces. The group publicly announces that they will treat the prisoners according to their own code of conduct instead of IHL, arguing that they do not recognize the Geneva Conventions as they were created by States. What is the most appropriate response under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL classifies a non-state armed group as a party to a non-international armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the applicability of IHL in non-international armed conflicts?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a prolonged non-international armed conflict, an organized armed group operates with a highly decentralized structure and routinely engages in hostilities. State X refuses to recognize the applicability of IHL, claiming that the group's lack of centralization renders it inadequate as a party to an armed conflict. Which approach best reflects the determination of the application of IHL in this scenario?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the obligations of non-State armed groups in non-international armed conflicts under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the employment of Private Military Companies (PMCs) or Private Security Companies (PSCs) personnel directly participating in hostilities, and if so, under what conditions might such an employee lose their protection as a civilian?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Regarding the status of employees of Private Military and Security Companies (PMCs/PSCs) under IHL, which of the following statements is accurate?",
+        "raw_response": "<answer>B,D</answer>",
+        "predicted": [
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, how are States that employ Private Military and Security Companies (PMCs/PSCs) expected to fulfill their obligations to ensure respect for IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State X hires a Private Military Company (PMC) to provide security services in a conflict zone. During an operation, the PMC engages in combat, resulting in civilian casualties. Under IHL, what is State X's primary obligation in relation to the PMC's actions?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A State employing a private military company (PMC) to guard a detention facility housing prisoners of war has failed to train the PMC staff on IHL standards. A violation against a detainee happens, and the PMC argues that they were not legally obligated to know IHL. Which of the following best describes the State's obligations in this scenario?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under the IHL regarding occupation, which of the following actions is permissible for an occupying power?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the law of occupation ?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of IHL, under what conditions might an occupying power justifiably deviate from the obligation to maintain the status quo of the legal and institutional frameworks within the occupied territory?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following principles should guide the administration of an occupied territory when considering transformative changes?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following considerations is crucial when determining the applicability of occupation law in territories administered by multinational forces?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the establishment of sanctions as a form of deterrence against serious IHL violations under conditions of occupation by multinational forces?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a recently established multinational administration overseeing a conflict-affected region, local leaders argue that enforcing disciplinary sanctions against their own troops for IHL violations is sufficient and that criminal sanctions are not necessary as they might destabilize local peace efforts. How should this situation be assessed under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the enforcement and implementation of IHL through sanctions?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what is considered a critical factor influencing the deterrent effect of sanctions imposed on violations by arms carriers ?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it may be permissible to re-distribute resources in an occupied territory if:",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of multinational forces administering a territory, which of the following measures is most reflective of the principles of IHL concerning the needs and expectations of victims?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A multinational force is administering a foreign territory after an armed conflict. During their administration, they decide to enforce a new law that restricts freedom of expression, arguing that this is necessary for maintaining security. Which statement best reflects how IHL might guide the actions of the multinational force in this situation?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements best describes a fundamental challenge faced by IHL in contemporary armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the impact of contemporary challenges on IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During an urban armed conflict, an attacking military force plans to target a communication tower which is integrated into a residential building occupied by civilians. Considering their obligations under IHL, the commanders must ensure their operations adhere to which of the following principles to minimize harm to civilians?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of explosive weapons in urban warfare?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the use of explosive weapons with wide area effects in populated areas under all circumstances?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, it is always permissible to use explosive weapons in populated areas if:",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of sieges under IHL, which of the following actions is prohibited to ensure protection of the civilian population?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State Z has developed a cyber tool capable of disabling the  power grid of an enemy State during an armed conflict. Its military leaders argue that disabling the grid will force the enemy to surrender without any direct physical harm to civilians. However, this action could also cause indirect harm by affecting hospitals and sanitation systems. Under IHL, is this cyber operation permissible?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the application of IHL to cyber operations during armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an armed conflict, a State deploys an autonomous weapon system capable of independently identifying and attacking targets. The system operates based on a predetermined target profile and without human intervention during its operation. What is the primary legal and ethical concern related to the use of such a weapon system under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it may be permissible to utilize autonomous weapon systems if:",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a conflict involving multiple nations, State A considers deploying a cyber attack to disable satellite systems used by State B for both military and civilian navigation services. Which of the following considerations under IHL should primarily guide State A\u2019s decision regarding the attack?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a conflict, State X uses a non-kinetic method to disable a satellite used for both civilian and military purposes by State Y, resulting in disrupted navigation systems and communications. Under IHL, what is the primary legal consideration that State X must account for in this operation?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following best describes a significant challenge faced by legal reviews of new autonomous weapon systems under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following measures is most aligned with IHL for preserving the civilian character of IDP camps during armed conflicts?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a protracted internal armed conflict, a State has decided to undertake a military offensive in a region heavily populated with internally displaced persons (IDPs). Which of the following principles under IHL must be primarily considered to ensure the protection of IDPs in this scenario?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In the context of IHL during armed conflicts, which of the following actions specifically addresses the protection and inclusion of persons with disabilities?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an international armed conflict, the occupying power finds its resources stretched thin and considers requisitioning a part of a local school building for military barracks. Which of the following statements correctly reflects the obligations of the occupying power concerning the use of educational facilities under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what measures should parties to the conflict take concerning children's access to education?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a region where several non-state armed groups operate, Group X has splintered into two factions: X1 and X2. X1 continues to engage alongside its allied groups in hostilities against the state, while X2 refrains from any engagement but occasionally provides logistical support to X1. The State argues that IHL does not apply to X2 due to its  non-engagement in direct hostilities. Under IHL principles, what criterion is essential in determining if X2 is a party to the conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, how is the applicability of IHL determined in conflicts involving multiple non-state armed groups engaging in various alliances or coalitions?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a region controlled by a non-state armed group, the local population faces severe restrictions on mobility and communication, enforced under the guise of maintaining order and security. Which legal framework applies to protect the civilians' rights in this scenario?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which factor complicates the compliance of IHL by non-State armed groups in detaining individuals?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL applicable in non-international armed conflict prohibit a State from classifying all acts of violence by a non-State armed group designated as 'terrorists' as violations of IHL, even if those acts conform to IHL standards during an armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "State X is engaged in military operations against a non-state armed group within its territory, which it has designated as a 'terrorist organization.' During these operations, State X advocates for military tactics that include targeting individuals financing the group as combatants. How should these tactics be evaluated under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "When assessing the applicability of IHL to counterterrorism operations involving groups designated as 'terrorists,' which of the following conditions must be met?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the interaction between counterterrorism measures and IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "State Z, engaged in a non-international armed conflict, has captured several foreign fighters and their families, whom it has labeled as 'terrorists.' State Z is debating the legal implications of detaining these individuals under IHL. Which of the following positions accurately reflects their obligations under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the status and protection of foreign fighters and their families under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "IHL prohibits the deliberate destruction of the natural environment in warfare if it is expected to cause:",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following principles is crucial in conducting effective investigations into alleged violations of IHL during armed conflict?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In promoting respect for IHL among decentralized non-State armed groups, which approach is most effective according to recent studies?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A newly formed non-state armed group in a conflict region has a decentralized structure and lacks a formal military hierarchy. Despite this, they are observed to show a high level of compliance with IHL. Which of the following factors is most likely influencing their behavior?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit a supporting State from providing assistance to a party to an armed conflict if that assistance increases the risk of violations of IHL, and what responsibility does it entail?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which consideration is crucial when a State provides military support to a non-State actor in a non-international armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a multinational military operation, Country X, which is not a party to Additional Protocol I of the Geneva Conventions, provides logistical support to Country Y, that is engaged in hostilities. Evidence arises that Country Y is committing serious violations of IHL. What legal obligation does Country X have under IHL to ensure respect for the law?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "When seeking to enhance respect for IHL, which of the following actions is considered most critical for States to implement?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL allow the threat or use of nuclear weapons in armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During an international armed conflict, a high-ranking military official of State Z considers deploying a newly developed tactical nuclear weapon against a military base situated near a densely populated city in State X. The official argues that since the nuclear weapon targets only the military base, it complies with IHL. How should IHL principles be applied to assess the legality of this use of nuclear weaponry?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In a recent conflict, State X, which does not officially declare wars, engaged in covert cyber operations targeting critical infrastructure in State Y, causing significant disruption. State X argues that since there are no direct military engagements, it does not constitute an armed conflict under IHL. Considering the principles of IHL, which statement correctly addresses whether this situation can be classified as an armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of IHL, how can a situation described as 'proxy warfare' potentially be classified as an international armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, which of the following actions are required for a state when dealing with detainees of a non-state armed group in a non-international armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the detention of individuals during armed conflicts under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an inernational armed conflict, which procedural step must parties to a conflict prioritize to fulfill their obligation towards resolving cases of missing persons?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the denial of family contact for detained individuals during armed conflict, and under what conditions can this prohibition be lifted?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In the context of IHL, which of the following measures is NOT aligned with the aim of preserving family unity during armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, it is always permissible to temporarily evacuate civilians if:",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an international armed conflict, Party X decides to evacuate a group of unaccompanied children for their safety. Which of the following actions would be consistent with their obligations under IHL regarding such evacuations?",
+        "raw_response": "<answer>B,D</answer>",
+        "predicted": [
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of heavy explosive weapons in populated areas?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit the use of heavy explosive weapons in populated areas even if the military advantage is deemed significant?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of  force against a medical facility that has been alleged to be used for military purposes?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During an armed conflict, a state X decides to store weapons in a civilian hospital, arguing that it serves as a strategic vantage point. Subsequently, an enemy state Y receives intelligence about the weapons and considers its positioning a harmful act. Should state Y decide to attack the hospital, what legal obligations must it fulfil before proceeding with its plans, according to IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following statements is false concerning the protection of the natural environment under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what is a crucial aspect of protecting the natural environment during armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under international law, it is always permitted to use anti-personnel mines and cluster munitions if:",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the efforts to address the threat of anti-personnel mines and cluster munitions under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the application of IHL to cyber operations during armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In the context of autonomous weapon systems (AWS) and IHL, which of the following presents a primary concern associated with AWS in armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a  military operation, State X uses an AI-decision-support system to recommend targets in a densely populated urban area. The final output suggests attacking a building believed to house enemy combatants without any additional human assessment. Which principle of IHL is most at risk of being violated in this scenario?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following challenges arises from the integration of AI-decision-support systems in military planning and decision-making under IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Under IHL, which measure should States take to comply with when deploying AI-decision-support systems in military operations conducted in outer space?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under what conditions does IHL allow the use of AI-decision-support systems in military operations in outer space?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How can States ensure that counter-terrorism measures do not impede the delivery of impartial humanitarian assistance in conflict zones?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the protection of humanitarian organizations against digital threats under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit actions that can lead to misperceptions about humanitarian operations, and if so, how might this be reflected in related obligations?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the interaction between IHL and local cultural and legal frameworks?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following measures is NOT consistent with a state's obligation to ensure respect for IHL in the transfer of weapons?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "IHL prohibits the transfer of arms if they are likely to be used to:",
+        "raw_response": "<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In a digital age where disinformation can spread rapidly, State X is accused of utilizing online platforms to propagate false narratives that obstruct humanitarian operations in an active conflict zone. What does IHL demand of State X in this circumstance?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements is false regarding the role of respect for IHL in facilitating peace?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Can the white flag of truce be used to conduct hostilities in an armed conflict?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a non-international armed conflict, an organized armed group sets up a white flag of truce as part of a military operation against a State's armed forces. This operation did not result in any casualties. According to IHL, which of the following statements is true?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How does IHL regulate the use of the distinctive emblems of the Geneva Convention, including the red cross and red crescent?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "State A uses a truck displaying the red crescent to conduct military operations, resulting in the death of many civilians in State B. Which of the following statements is true?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does IHL regulate the use of the United Nations emblem in the context of international armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "State A conducts a military operation using the United Nations emblem and uniforms to decieve State B. Which of the following statements is true? ",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL prohibit the improper use of the protective emblem of cultural property?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Consider the following scenario: Organized armed group XY is engaged in a non-international armed conflict with State A. XY uses the distinctive sign for works and installations containing dangerous forces for their military base to distract State A. Under IHL, which of the following statements is true?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL consider perfidious the use of flags or military emblems, insignia or uniforms of the adversary?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A national liberation movement uses the military uniform of State A to conduct military operations. Is this a violation of IHL?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL prohibit the use of flags or military emblems of neutral or other States not party to the conflict by organized armed groups?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Organized armed group XY uses the military emblems and uniforms of State V, which is not part of the armed conflict ongoing with organized group XY and State Z. The purpose is to deceive State Z in the conduct of a military operation. Which of the following statements is true?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit concluding an agreement to suspend combat with the intention of attacking by surprise the enemy in non-international armed conflicts?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Consider the following scenario: Organized armed group A concludes an agreement to suspend combat with State B. Afterwards, organized armed group A conducts an attack on the governmental house of State B. Could this act constitute a breach of IHL?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL prohibit the capturing of a group of enemy soldiers by using their own emblems and uniforms? ",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following does NOT constitute a violation of IHL:",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Does IHL prohibit non-hostile contacts between parties to an armed conflict by persons other than commanders?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State A, engaged in an armed conflict with State B, wants to arrange an exchange of prisoners with State B. State A notifies State B of their parlementaire\u2019s entrance into State B\u2019s prison through a written note. Does IHL oblige State B to respect and admit the parlementaire?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, does a parlementaire enjoy inviolability and protection from attack or detention while carrying out their mission to communicate between conflicting parties?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Organized armed group X, engaged in an armed conflict with State A, sends a parlementaire, a flag bearer, and an interpreter towards State A. On the way, the interpreter sees military personnel from State A approaching and shoots them dead. Did the organized armed group commit a breach of IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A parlementaire from State B arrives in the territory of State A, against whom they are engaged in an armed conflict. The parlementaire overhears State A's plans for a military operation against State B. Does IHL allow State A to detain the parlementaire to prevent them from disclosing this information? ",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "State B sends a parlementaire displaying a white flag of truce to State A. The army of State A, acting on well-founded information that the parlementaire is being used to deceive State A and gain a military advantage, kills the parlementaire. After further investigation, State A confirms that State B had indeed sent a parlementaire under false pretenses to deceive them and exploit their good faith. Could killing the parlementaire be considered a violation of IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following are examples of parlementaires taking advantage of their privileged position resulting in a loss of their inviolability? ",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an engagement against the enemy, a soldier uses a type of bullet that fragments upon impact, causing severe internal injuries. Does this violate IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following weapons would be prohibited in armed conflict?",
+        "raw_response": "<answer>C,D</answer>",
+        "predicted": [
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A soldier uses a weapon that fires small fragments that cannot be detected with standard medical imaging techniques.\nDoes this violate IHL?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions is prohibited in armed conflict?",
+        "raw_response": "<answer>A,D</answer>",
+        "predicted": [
+            "A",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A soldier places an explosive device, disguised as a child's toy, near a refugee camp which is rumoured to be harbouring combatants.\nDoes this violate IHL?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A military unit lays landmines in a field near a village.\nDoes this violate IHL?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A military unit lays landmines without keeping detailed records of their location.\nDoes this action violate IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A State ceases active hostilities in a region where it has previously laid landmines. Does this State have any further obligations under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A military unit uses incendiary weapons in an attack on a military objective located in a densely populated urban area.\nDoes this violate IHL?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A soldier, armed with a gun and grenade, uses a flamethrower against an enemy combatant who is hiding in a bunker.\nWas this a violation of IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A soldier uses a laser weapon that temporarily blinds an enemy combatant.\nIs this a violation of IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>A,B,C</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A military commander captures enemy combatants during an armed conflict. The combatants are detained, and their families request communication. How should this request be handled?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "A government detains several civilians during a non-international armed conflict. Their families request to visit the detainees. How should the authorities respond?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A group of prisoners of war, belonging to different religious groups, is detained during an international armed conflict. Some prisoners request time and space to perform their religious practices. How should the detaining authorities respond under IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>A,B,D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": false
+    },
+    {
+        "question": "How does the release of detainees differ between international and non-international armed conflicts, according to IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, in an international armed conflict, a detaining power may transfer:",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During an international armed conflict, a military occupying force orders the forced relocation of a large part of the civilian population in the occupied territory. The purpose is to make space for military operations. Was this lawful under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in an armed conflict?",
+        "raw_response": "<answer>A,B</answer>",
+        "predicted": [
+            "A",
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A state occupying a foreign territory begins encouraging its own citizens to settle in the occupied region, offering financial incentives for them to move there. Under IHL, is this action lawful?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In an international armed conflict, a group of civilians is being relocated due to escalating hostilities. Which of the following actions is required under IHL to meet the standards for their treatment?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "After the end of hostilities in a non-international armed conflict, displaced civilians request to return to their homes. However, the authorities claim that they are not yet ready to facilitate the return and suggest the civilians remain in the camps indefinitely.  According to IHL, what should the authorities do?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on IHL, which of the following actions would be prohibited in an armed conflict?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "During an international armed conflict, a group of civilians is displaced from their homes. While they are away, the occupying military force confiscates their property and distributes it amongst themselves and to other civilians.  Under IHL, is this action lawful?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Which of the following statements concerning the rights of women during an armed conflict are correct?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What does the special respect and protection due to children affected by armed conflict entail?",
+        "raw_response": "<answer>A,B,C,D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, children:",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In an area of conflict, a paramilitary group enlists teenagers aged 14-17 to perform logistical support such as cooking and cleaning. Under IHL, how is this practice viewed?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During a non-international armed conflict, an armed group recruits several teenagers from a village to act as messengers and cooks, claiming that they are not being used in combat roles. Is this a violation of IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "In a non-international armed conflict, an armed group uses children to deliver messages between military units in the combat zone. The children are not directly fighting but are present near the front lines. Is this lawful under IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Based on Customary IHL, which of the following actions would be prohibited in armed conflict?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "During an armed conflict, a group of elderly civilians requests assistance to evacuate from a conflict zone. The military forces decide to focus on evacuating younger civilians first. Under customary IHL, how should the military have acted?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "State A and State B are involved in an international armed conflict. During the conflict, State A violates IHL causing State B to suffer significant loss and injury. Does State A have any recourse under IHL?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "What forms of reparation are available to a State that has suffered injury or loss to a State that is responsible for violations of IHL causing this injury or loss?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under  IHL, can individuals be held criminally responsible for war crimes?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What actions result in a person bearing individual criminal responsibility for war crimes?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "A commander orders her subordinates to commit a war crime. The subordinates attempt to do so but fail. What are the implications for the commander, according to IHL?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "When can a commander be held responsible for the actions of his subordinates?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does IHL establish that command responsibility applies to both military and civilian superiors when preventing or addressing war crimes committed by subordinates?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How is the necessity of a commander\u2019s knowledge or awareness of a subordinate's war crimes interpretated under IHL?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under IHL, what is the duty of a combatant when faced with a manifestly unlawful order?",
+        "raw_response": "<answer>A</answer>",
+        "predicted": [
+            "A"
+        ],
+        "ground_truth": [
+            "A"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, does the concept of \"manifestly unlawful\" differ from simply \"unlawful\" in the context of obedience to orders?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, which of the following prevent a subordinate from relying on the defence of superior orders for war crimes committed?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What qualifies as a \u201cserious violation\u201d  of IHL amounting to a war crime?",
+        "raw_response": "<answer>A,B,D</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which of the following actions would consitute war crimes?",
+        "raw_response": "<answer>A,C,D</answer>",
+        "predicted": [
+            "A",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to IHL, can national courts exercise universal jurisdiction over war crimes?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "According to IHL, when can States exercise universal jurisdiction over crimes committed during an armed conflict?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "According to customary IHL, what are the war crimes that should be prosecuted by States?",
+        "raw_response": "<answer>B,C,D</answer>",
+        "predicted": [
+            "B",
+            "C",
+            "D"
+        ],
+        "ground_truth": [
+            "A",
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "In what cases are States obliged to investigate war crimes?",
+        "raw_response": "<answer>C,B,A</answer>",
+        "predicted": [
+            "A",
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under customary IHL, which of these actions are open to a State if its nationals are alleged to have committed war crimes?",
+        "raw_response": "<answer>B,D</answer>",
+        "predicted": [
+            "B",
+            "D"
+        ],
+        "ground_truth": [
+            "B",
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under customary IHL, what are some international limitations on the granting of amnesties in non-international armed conflicts?",
+        "raw_response": "<answer>A,C</answer>",
+        "predicted": [
+            "A",
+            "C"
+        ],
+        "ground_truth": [
+            "A",
+            "C"
+        ],
+        "correct": true
+    },
+    {
+        "question": "What is the position of IHL on statute of limitations for war crimes?",
+        "raw_response": "<answer>B</answer>",
+        "predicted": [
+            "B"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": true
+    },
+    {
+        "question": "How does IHL regulate cooperation amongst States when investigating and prosecuting war crimes?",
+        "raw_response": "<answer>B,C</answer>",
+        "predicted": [
+            "B",
+            "C"
+        ],
+        "ground_truth": [
+            "B"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Which forms of discrimination are prohibited under customary IHL?",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "B",
+            "C",
+            "D"
+        ],
+        "correct": false
+    },
+    {
+        "question": "Does customary IHL prohibit all uses of poison or poisoned weapons?",
+        "raw_response": "<answer>D</answer>",
+        "predicted": [
+            "D"
+        ],
+        "ground_truth": [
+            "D"
+        ],
+        "correct": true
+    },
+    {
+        "question": "Under customary IHL:",
+        "raw_response": "<answer>C</answer>",
+        "predicted": [
+            "C"
+        ],
+        "ground_truth": [
+            "C"
+        ],
+        "correct": true
+    }
+]
