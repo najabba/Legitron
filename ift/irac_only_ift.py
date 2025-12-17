@@ -10,10 +10,8 @@ from transformers import AutoTokenizer
 INPUT_FILE = "/capstor/store/cscs/swissai/a127/meditron/datasets/legitron/charlotte_scrape/output.json"
 OUTPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/lsimonnet/axolotl_datasets/ift_try2_vLLM_charlotte_qwen_full.json"
 
-# Modèle Teacher (Local sur le cluster)
 MODEL_PATH = "Qwen/Qwen2.5-32B-Instruct"
 
-# Paramètres Physiques
 TENSOR_PARALLEL_SIZE = 1  
 CONTEXT_CHAR_LIMIT = 8000
 
@@ -75,7 +73,7 @@ def prepare_prompts(raw_data: List[Dict], tokenizer) -> tuple[List[str], List[in
             {"role": "user", "content": user_content}
         ]
         
-        # Application du template Qwen (<|im_start|>...)
+        # template Qwen (<|im_start|>...)
         full_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         
         prompts_list.append(full_prompt)
@@ -95,11 +93,11 @@ def main():
     print("🔧 Initializing Tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, trust_remote_code=True)
 
-    # Préparation des données
+    # preparing data
     prompts, indices = prepare_prompts(raw_data, tokenizer)
     print(f"🚀 Ready to process {len(prompts)} documents.")
 
-    # Initialisation du Moteur vLLM
+    # Initilizing vLLM
     print(f"🔌 Initializing vLLM Engine (TP={TENSOR_PARALLEL_SIZE})...")
     llm = LLM(
         model=MODEL_PATH,
@@ -107,21 +105,21 @@ def main():
         trust_remote_code=True,
         gpu_memory_utilization=0.95,
         max_model_len=8192, 
-        enforce_eager=True # Souvent nécessaire pour Qwen sur certaines versions vLLM
+        enforce_eager=True 
     )
 
     sampling_params = SamplingParams(
         temperature=0.7,
         top_p=0.95,
-        max_tokens=2048, # Suffisant pour IRAC + JSON
+        max_tokens=2048, 
         stop=["<|im_end|>", "<|endoftext|>"]
     )
 
-    # Génération Massive (Batch)
+    # Generation
     print("🔥 Starting High-Throughput Generation...")
     outputs = llm.generate(prompts, sampling_params)
 
-    # Post-traitement
+    
     final_dataset = []
     success_count = 0
     
@@ -130,14 +128,14 @@ def main():
         generated_text = output.outputs[0].text
         
         try:
-            # Nettoyage Markdown (```json ... ```)
+            # Cleaning 
             cleaned_json = generated_text.replace("```json", "").replace("```", "").strip()
             data = json.loads(cleaned_json)
             
-            # Formatage propre du raisonnement (String only)
+            # 
             reasoning_raw = data.get('reasoning', '')
             if isinstance(reasoning_raw, (dict, list)):
-                reasoning_str = str(reasoning_raw) # Simplifié, mais le modèle devrait suivre le prompt
+                reasoning_str = str(reasoning_raw) 
             else:
                 reasoning_str = str(reasoning_raw)
 
@@ -162,9 +160,9 @@ def main():
             success_count += 1
             
         except json.JSONDecodeError:
-            continue # On skip silencieusement les échecs pour ce run massif
+            continue 
 
-    # Sauvegarde
+    
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     print(f"💾 Saving {len(final_dataset)} valid items to {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
