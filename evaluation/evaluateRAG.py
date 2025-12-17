@@ -15,7 +15,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-INPUT_FILE = "/users/vesy/Legitron/datasets/law_benchmark_data.json"
+INPUT_FILE = "/users/$USER/Legitron/datasets/law_benchmark_data.json"
 
 
 # ============================================================
@@ -156,8 +156,6 @@ def load_model(path):
 # ============================================================
 
 def get_prediction(model, tokenizer, question, options, rag_context):
-    """Now uses RAG context to build the input prompt."""
-
     prompt_text = build_rag_prompt(question, options, rag_context)
 
     messages = [{"role": "user", "content": prompt_text}]
@@ -182,12 +180,10 @@ def get_prediction(model, tokenizer, question, options, rag_context):
         skip_special_tokens=True
     )
 
-    # Extract <answer>
     ans_match = re.search(r"<answer>(.*?)</answer>", response, re.DOTALL | re.IGNORECASE)
     answer_text = ans_match.group(1).strip() if ans_match else ""
     predicted_letters = sorted(set(re.findall(r"[A-D]", answer_text)))
 
-    # Extract <source>
     src_match = re.search(r"<source>(.*?)</source>", response, re.DOTALL | re.IGNORECASE)
     predicted_source = src_match.group(1).strip() if src_match else ""
 
@@ -199,36 +195,29 @@ def get_prediction(model, tokenizer, question, options, rag_context):
 # ============================================================
 
 def evaluate(model_path, index_dir, embed_model_name="BAAI/bge-large-en"):
-    # Load dataset
     with open(INPUT_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # Load model
     model, tokenizer = load_model(model_path)
 
-    # Load RAG components ONCE
     embeddings, rules = load_rag_index(index_dir)
     embed_model = SentenceTransformer(embed_model_name)
 
     score = 0
     source_score = 0
     total = len(data)
+    results = []
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    out = f"/users/vesy/Legitron/evaluation/predictions/local_model_results_{timestamp}.json"
+    out = f"/users/$USER/Legitron/evaluation/predictions/local_model_results_{timestamp}.json"
 
     print(f"\nRunning evaluation with RAG on {total} questions...")
-    print(f"Saving incremental results to: {out}\n")
-
-    with open(out, "w") as f:
-        f.write("[\n")
 
     for i, item in enumerate(data):
-        # ----- RAG retrieval -----
-        full_query = item["question"] + " " + " ".join(item["options"].values())
-
+        choices = [f"{key}) {value}" for key, value in item["options"].items()]
+        question_prompt = item["question"] + "\n" + "\n".join(choices)
         rag_context = retrieve_context(
-            full_query, embed_model, embeddings, rules
+            question_prompt, embed_model, embeddings, rules, top_k=5
         )
 
         predicted_letters, predicted_source, raw_output = get_prediction(
@@ -249,47 +238,33 @@ def evaluate(model_path, index_dir, embed_model_name="BAAI/bge-large-en"):
         if source_correct:
             source_score += 1
 
-        print(f"[{i+1}/{total}] Correct={correct} Pred={predicted_letters} True={ground_truth}")
+        status_icon = "✅" if correct else "❌"
+        print(f"[{i+1}/{total}] {status_icon} | Pred={predicted_letters} | True={ground_truth}")
 
-        result = {
-        "question_number": i + 1,
-        "question": item["question"],
-        "options": {
-            "A": item["options"]["A"],
-            "B": item["options"]["B"],
-            "C": item["options"]["C"],
-            "D": item["options"]["D"]
-        },
-        "predicted": predicted_letters,
-        "ground_truth": ground_truth,
-        "source_pred": predicted_source,
-        "source_true": item.get("source", ""),
-        "correct": correct,
-        "source_correct": source_correct,
-        "raw_output": raw_output,
-        "rag_context_used": rag_context,
-}
+        results.append({
+            "question": item["question"],
+            "predicted": predicted_letters,
+            "ground_truth": ground_truth,
+            "source_pred": predicted_source,
+            "source_true": item.get("source", ""),
+            "correct": correct,
+            "source_correct": source_correct,
+            "raw_output": raw_output,
+            "rag_context_used": rag_context,
+        })
 
-        with open(out, "a") as f:
-            json.dump(result, f, indent=4, ensure_ascii=False)
-            if i < total - 1:
-                f.write(",\n")
-            else:
-                f.write("\n")
-
-    with open(out, "a") as f:
-        f.write("]")
+    with open(out, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=4)
 
     print("\nFINAL RESULTS:")
     print(f"MCQ accuracy: {score}/{total} = {score/total*100:.2f}%")
     print(f"Source accuracy: {source_score}/{total} = {source_score/total*100:.2f}%")
     print(f"Saved to: {out}")
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, required=True)
-    parser.add_argument("--index-dir", type=str, required=True)
+    parser.add_argument("--model", type=str, required=True, help="Path to the model checkpoint")
+    parser.add_argument("--index-dir", type=str, required=True, help="Path to the embeddings directory")
     args = parser.parse_args()
 
     evaluate(args.model, args.index_dir)
