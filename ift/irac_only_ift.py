@@ -15,7 +15,7 @@ MODEL_PATH = "Qwen/Qwen2.5-32B-Instruct"
 
 # Paramètres Physiques
 TENSOR_PARALLEL_SIZE = 1  
-CONTEXT_CHAR_LIMIT = 12000
+CONTEXT_CHAR_LIMIT = 8000
 
 # --- PROMPTS ---
 SYSTEM_PROMPT = """You are an expert Legal Reasoning Generator specializing in International Humanitarian Law (IHL).
