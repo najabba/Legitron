@@ -10,8 +10,7 @@ INPUT_FILE = "/users/$USER/Legitron/datasets/law_benchmark_data.json"
 def load_model(path):
     print(f"Loading model from {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path)
-    
-    # Load model with automatic device mapping (GPU if available)
+
     model = AutoModelForCausalLM.from_pretrained(
         path,
         device_map="auto",
@@ -21,8 +20,6 @@ def load_model(path):
     return model, tokenizer
 
 def get_prediction(model, tokenizer, question, options):
-    # 1. Format the prompt clearly
-    # We use a chat template format which works best for Instruct/Chat models
     prompt_text = f"""You are a legal expert taking a multiple-choice exam.
 Question: {question}
 
@@ -42,7 +39,6 @@ Think quickly step by step and Select the best option or options and reply with 
         {"role": "user", "content": prompt_text}
     ]
     
-    # Apply the model's specific chat template (handles special tokens automatically)
     try:
         input_ids = tokenizer.apply_chat_template(
             messages, 
@@ -50,35 +46,28 @@ Think quickly step by step and Select the best option or options and reply with 
             return_tensors="pt"
         ).to(model.device)
     except Exception:
-        # Fallback if model has no chat template (base models)
         input_ids = tokenizer(prompt_text, return_tensors="pt").input_ids.to(model.device)
 
-    # 2. Generate Response
-    # We limit max_new_tokens to 10 because we only want a short answer (A, B, C...)
     outputs = model.generate(
         input_ids, 
         max_new_tokens=10, 
-        temperature=0.1, # Low temperature for deterministic answers
+        temperature=0.1,
         do_sample=False,
         pad_token_id=tokenizer.eos_token_id
     )
 
-    # 3. Decode output
-    # Slice [input_ids.shape[1]:] to remove the prompt from the output
     response = tokenizer.decode(outputs[0][input_ids.shape[1]:], skip_special_tokens=True)
-    # Extract <answer>...</answer>
     match = re.search(r"<answer>(.*?)</answer>", response, re.DOTALL | re.IGNORECASE)
     if match:
         answer_text = match.group(1).strip()
     else:
-        answer_text = ""  # No answer found
+        answer_text = ""
 
     predicted_letters = sorted(set(re.findall(r"[A-D]", answer_text.upper())))
 
     return predicted_letters, response
 
 def evaluate(model_path):
-    # Load Data
     try:
         with open(INPUT_FILE, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -86,7 +75,6 @@ def evaluate(model_path):
         print(f"Error: {INPUT_FILE} not found. Run the sheet/excel converter first!")
         return
 
-    # Load Model
     model, tokenizer = load_model(model_path)
 
     score = 0
@@ -98,31 +86,13 @@ def evaluate(model_path):
     print(f"\nStarting evaluation on {total} questions using local checkpoint...\n")
 
     for i, item in enumerate(data):
-        # raw_response = get_prediction(model, tokenizer, item['question'], item['options'])
         predicted_letters, raw_response = get_prediction(model, tokenizer, item['question'], item['options'])
-        # Extract Letters (A, B, C, D) from response
-        # Using Regex to ignore extra text like "The answer is A"
-        # predicted_letters = sorted(list(set(re.findall(r'[A-D]', raw_response.upper()))))
         ground_truth = sorted(item['correct_answers'])
         
-        # Check correctness
         is_correct = (predicted_letters == ground_truth)
         if is_correct: score += 1
-        #sample_score = 0
-        #for letter in ['A','B','C','D']:
-        #    in_prediction = letter in predicted_letters
-        #    in_ground_truth = letter in ground_truth
-        #    
-        #    # Match: Both have it (True Positive) OR Both don't have it (True Negative)
-        #    if in_prediction == in_ground_truth:
-        #        sample_score += 0.25
-
-        #score += sample_score
-	
-        
-        # Print live status
+            
         status_icon = "✅" if is_correct else "❌"
-        #status_icon = "✅" if sample_score == 1 else "❌" if sample_score == 0 else "🟡"
         print(f"[{i+1}/{total}] {status_icon} | Pred: {predicted_letters} | True: {ground_truth}")
 
         results.append({
@@ -130,25 +100,19 @@ def evaluate(model_path):
             "raw_response": raw_response,
             "predicted": predicted_letters,
             "ground_truth": ground_truth,
-            #"score": sample_score,
-	    "correct": is_correct
+    	    "correct": is_correct
         })
-
-        # Save results
-        with open(output_filename, 'w', encoding='utf-8') as f:
-            json.dump(results, f, indent=4)
 
     accuracy = (score / total) * 100
     print(f"\nFinal Accuracy: {accuracy:.2f}%")
-        
-    # Save results    
+     
     with open(output_filename, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4)
+        print(f"Predictions saved at /users/$USER/Legitron/evaluation/predictions/local_model_results_{timestamp}.json")
 
     return accuracy
 
 if __name__ == "__main__":
-    # --- Parse Arguments ---
     parser = argparse.ArgumentParser(description="Evaluate a model checkpoint.")
     parser.add_argument("--model", type=str, required=True, help="Path to the model checkpoint")
     args = parser.parse_args()
