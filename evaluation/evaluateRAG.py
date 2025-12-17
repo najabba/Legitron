@@ -11,12 +11,11 @@ import re
 import argparse
 from datetime import datetime
 import numpy as np
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_similarity
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 INPUT_FILE = "/users/$USER/Legitron/datasets/law_benchmark_data.json"
-
 
 # ============================================================
 #                     RAG FUNCTIONS
@@ -30,84 +29,27 @@ def load_rag_index(index_dir):
     return embeddings, rules
 
 
-def retrieve_context(
-    query,
-    embed_model,
-    embeddings,
-    rules,
-    max_rules=3,
-    min_similarity=0.82,
-    max_interp_words=150
-):
-    query_emb = embed_model.encode([query]).astype("float32")
-    similarities = cosine_similarity(query_emb, embeddings)[0]
+def retrieve_context(query, embed_model, embeddings, rules, top_k=5):
+    query_embed = embed_model.encode(query, convert_to_tensor=True)
 
-    ranked_idx = similarities.argsort()[::-1]
+    corpus_embeddings = torch.from_numpy(embeddings).to(query_embed.device)
+    cos_scores = util.cos_sim(query_embed, corpus_embeddings)[0]
+
+    top_results = torch.topk(cos_scores, k=min(top_k, len(rules)))
 
     context_parts = []
-    used = 0
 
-    for idx in ranked_idx:
-        sim = similarities[idx]
-        if sim < min_similarity:
-            break
-
+    for score, idx in zip(top_results.values, top_results.indices):
+        idx = int(idx)
         rule = rules[idx]
-        rule_id = rule.get("rule_id", "Unknown")
+        context_parts.append(f"[Rule {idx+1}] {rule['text']}")
 
-        rule_text = (rule.get("rule_text") or "").strip()
-        interpretation = (rule.get("interpretation") or "").strip()
-
-        block = [
-            f"### Rule {rule_id} (similarity={sim:.3f})",
-            "Normative Rule:",
-            rule_text
-        ]
-
-        if interpretation:
-            words = interpretation.split()
-            short_interp = " ".join(words[:max_interp_words])
-            if len(words) > max_interp_words:
-                short_interp += " …"
-
-            block.extend([
-                "",
-                "Interpretation / Commentary (NON-BINDING):",
-                short_interp
-            ])
-
-        context_parts.append("\n".join(block))
-        used += 1
-
-        if used >= max_rules:
-            break
-
-    return "\n\n".join(context_parts)
-
+    return "\n".join(context_parts)
 
 def build_rag_prompt(question, options, context):
     return f"""
-You are an expert in International Humanitarian Law.
-
-IMPORTANT:
-- ONLY the text labeled "Normative Rule" creates legal obligations.
-- The "Interpretation / Commentary" EXPLAINS the rule but DOES NOT create new obligations.
-
-LOGICAL CONSTRAINTS (STRICT):
-- If the question uses words like "always", "never", "only", or "under all circumstances":
-  an option is correct ONLY if it is true in ALL realistic IHL scenarios.
-  If it is false in even ONE scenario, it MUST be rejected.
-
-ENUMERATED OBLIGATIONS RULE:
-- If a Normative Rule lists multiple duties, ALL listed elements are mandatory.
-- Selecting only some of them is INCORRECT.
-
-PROHIBITIONS:
-- If a Normative Rule prohibits an act, ANY option allowing that act under ANY condition is FALSE.
-
-SOURCE BINDING:
-- The selected answer MUST be justified exclusively by the cited <source>.
-- If the cited rule does NOT explicitly support an option, it MUST NOT be selected.
+You are a legal expert in International Humanitarian Law.
+Answer the MCQs based on the provided context.
 
 ### CONTEXT:
 {context}
@@ -122,17 +64,21 @@ C) {options['C']}
 D) {options['D']}
 
 ### INSTRUCTIONS:
-1. Identify the SINGLE rule that directly governs this question.
-2. Identify the EXACT sentence in the Normative Rule that answers it.
-3. Select ONLY the option or options that match that sentence.
-4. Perform the FINAL CHECK before answering.
+Think quickly step by step and then provide the MCQ answer inside <answer></answer> tags in the format:
+<answer>A</answer>
+or
+<answer>A,C</answer>
+or
+<answer>A,C,B</answer>
+or
+<answer>A,C,D,B</answer>
+There can be other permutations of the examples provided for the correct answers..
 
-Output format (STRICT):
-<source>Rule X</source>
-<answer>Y,Z</answer>
-
+Also provide the IHL source that correspond the best inside <source></source>.
+Example: <source>Rule 123</source> (could be multiple sources)
 ### ANSWER:
-""".strip()
+"""
+
 
 # ============================================================
 #                   LOAD LOCAL MODEL
@@ -156,6 +102,8 @@ def load_model(path):
 # ============================================================
 
 def get_prediction(model, tokenizer, question, options, rag_context):
+    """Now uses RAG context to build the input prompt."""
+
     prompt_text = build_rag_prompt(question, options, rag_context)
 
     messages = [{"role": "user", "content": prompt_text}]
@@ -169,7 +117,7 @@ def get_prediction(model, tokenizer, question, options, rag_context):
 
     output_ids = model.generate(
         input_ids,
-        max_new_tokens=300,
+        max_new_tokens=1024,
         temperature=0.1,
         do_sample=False,
         pad_token_id=tokenizer.eos_token_id,
@@ -180,10 +128,12 @@ def get_prediction(model, tokenizer, question, options, rag_context):
         skip_special_tokens=True
     )
 
+    # Extract <answer>
     ans_match = re.search(r"<answer>(.*?)</answer>", response, re.DOTALL | re.IGNORECASE)
     answer_text = ans_match.group(1).strip() if ans_match else ""
-    predicted_letters = sorted(set(re.findall(r"[A-D]", answer_text)))
+    predicted_letters = sorted(set(re.findall(r"[A-D]", answer_text.upper())))
 
+    # Extract <source>
     src_match = re.search(r"<source>(.*?)</source>", response, re.DOTALL | re.IGNORECASE)
     predicted_source = src_match.group(1).strip() if src_match else ""
 
@@ -195,11 +145,13 @@ def get_prediction(model, tokenizer, question, options, rag_context):
 # ============================================================
 
 def evaluate(model_path, index_dir, embed_model_name="BAAI/bge-large-en"):
+    # Load dataset
     with open(INPUT_FILE, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     model, tokenizer = load_model(model_path)
 
+    # Load RAG components ONCE
     embeddings, rules = load_rag_index(index_dir)
     embed_model = SentenceTransformer(embed_model_name)
 
@@ -261,10 +213,11 @@ def evaluate(model_path, index_dir, embed_model_name="BAAI/bge-large-en"):
     print(f"Source accuracy: {source_score}/{total} = {source_score/total*100:.2f}%")
     print(f"Saved to: {out}")
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, required=True, help="Path to the model checkpoint")
-    parser.add_argument("--index-dir", type=str, required=True, help="Path to the embeddings directory")
+    parser.add_argument("--model", type=str, required=True)
+    parser.add_argument("--index-dir", type=str, required=True)
     args = parser.parse_args()
 
     evaluate(args.model, args.index_dir)
