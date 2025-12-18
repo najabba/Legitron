@@ -1,15 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=RAG_EVAL
-#SBATCH --chdir /users/vesy/
-#SBATCH --output /users/vesy/Legitron/reports/rag_eval/RAG_EVAL-%x.%j.out
-#SBATCH --error /users/vesy/Legitron/reports/rag_eval/RAG_EVAL-%x.%j.err
+#SBATCH --chdir /users/$USER/
+#SBATCH --output /users/$USER/Legitron/reports/rag_eval/-%x.%j.out
+#SBATCH --error /users/$USER/Legitron/reports/rag_eval/-%x.%j.err
 #SBATCH --partition=debug
 #SBATCH --nodes 1
 #SBATCH --ntasks-per-node 1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task 32
 #SBATCH --time 01:30:00
-#SBATCH --environment /users/vesy/.edf/axolotl.toml
+#SBATCH --environment /users/$USER/.edf/axolotl.toml
 #SBATCH -A a127
 
 echo "====================="
@@ -23,11 +23,9 @@ set -x
 # -----------------------------------
 # CONFIGURATION (EDIT IF NECESSARY)
 # -----------------------------------
-#"meta-llama/Meta-Llama-3-8B-Instruct"
-#"/capstor/store/cscs/swissai/a127/homes/nabbassi/models/llama3.1-8B-IFT_charlotte"
-MODEL_PATH="/capstor/store/cscs/swissai/a127/homes/nabbassi/models/llama3.1-8B-IFT_charlotte"
-INDEX_DIR="/users/vesy/Legitron/RAG/ihl_index"
-SCRIPT_PATH="/users/vesy/Legitron/evaluation/evaluateRAG.py"
+MODEL_PATH="/YOUR/MODEL/PATH"
+INDEX_DIR="/users/$USER/Legitron/RAG/ihl_index"
+SCRIPT_PATH="/users/$USER/Legitron/evaluation/evaluateRAG.py"
 
 
 echo "Model path: $MODEL_PATH"
