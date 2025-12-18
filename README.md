@@ -110,16 +110,18 @@ python ift/irac_only_ift.py
 ```
 
 ***Tip: Use `ift/ift_implementation.sh` to run these tasks on the CSCS cluster.***
+
 ***Open ift/ift_implementation.sh and update the SCRIPT_PATH variable to point to the specific script you want to run (e.g., ift/scrapeCharlotte_to_questions.py) and then submit the job with :***
-    ```bash
-    sbatch ift/ift_implementation.sh
-    ```
+    
+```bash
+sbatch ift/ift_implementation.sh
+```
 
 ### 3. Build the RAG Index ###
 
 Before using RAG, you must generate the embeddings for the IHL rules.
 ```bash
-python RAG/build_rag.py \
+sbatch RAG/build_rag.sh \
     --rules datasets/rules_with_interpretations.json \
     --outdir RAG/ihl_index \
     --model BAAI/bge-large-en

@@ -1,0 +1,17 @@
+torch>=2.1.0
+transformers>=4.36.0
+sentence-transformers>=2.2.2
+numpy
+scikit-learn
+
+axolotl  # Note: often requires specific install from source
+deepspeed
+accelerate
+peft
+bitsandbytes
+wandb
+
+vllm>=0.4.0  # Required for the high-throughput generation scripts in ift/
+
+tqdm
+typing
