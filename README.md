@@ -6,6 +6,8 @@ While the ultimate goal of Legitron is a fully deployable legal assistant, this 
 
 ## 📂 Project Structure
 
+* **`report/`**: **Project Documentation**.
+    * `Report.pdf`: The final report detailing our methodology, experiments, and findings.
 * **`datasets/`**: **Data Central**. Contains benchmarks, IHL rules, and synthetic training data.
     * `law_benchmark_data.json`: The Golden IHL Benchmark for evaluation (MCQs).
     * `rules_with_interpretations.json`: The corpus of IHL rules used to build the RAG embeddings.
