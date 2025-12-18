@@ -7,8 +7,8 @@ from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
 
 # --- CONFIGURATION ---
-INPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/lsimonnet/axolotl_datasets/charlotteScrape_to_questions_step1.json"
-OUTPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/lsimonnet/axolotl_datasets/charlotteScrape_final_dataset_step2.json"
+INPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/$USER/axolotl_datasets/charlotteScrape_to_questions_step1.json"
+OUTPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/$USER/axolotl_datasets/charlotteScrape_final_dataset_step2.json"
 
 MODEL_PATH = "Qwen/Qwen2.5-32B-Instruct"
 
@@ -20,15 +20,14 @@ SYSTEM_PROMPT = """You are a Senior International Humanitarian Law (IHL) Expert 
 Your task is to generate high-quality Multiple Choice Questions (MCQ) for a specialized dataset.
 You must analyze the provided Source Text and the specific Scenario to create precise legal options and a detailed reasoning trace."""
 
-def final_clean(text: str) -> str:
-    """Cleans encoding artifacts."""
+def final_clean(text):
     if not text: return ""
     text = text.replace("?~@~Ys", "'s").replace("?~@~Y", "'")
     text = text.replace("?~@~S", "-").replace("?~@~\\", '"')
     text = text.replace("?~@~T", "-")
     return re.sub(r'\?~@~.', '', text)
 
-def prepare_step2_prompts(data: List[Dict], tokenizer) -> List[str]:
+def prepare_step2_prompts(data, tokenizer):
     prompts_list = []
     print("⚙️  Formatting prompts...")
     
@@ -75,7 +74,7 @@ def prepare_step2_prompts(data: List[Dict], tokenizer) -> List[str]:
         
     return prompts_list
 
-def extract_json(text: str) -> str:
+def extract_json(text):
     try:
         start = text.find('{')
         end = text.rfind('}') + 1

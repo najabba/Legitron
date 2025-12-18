@@ -7,7 +7,7 @@ from vllm import LLM, SamplingParams
 from transformers import AutoTokenizer
 
 INPUT_FILE = "/capstor/store/cscs/swissai/a127/meditron/datasets/legitron/charlotte_scrape/output.json"
-OUTPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/lsimonnet/axolotl_datasets/charlotteScrape_to_questions_step1.json"
+OUTPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/$USER/axolotl_datasets/charlotteScrape_to_questions_step1.json"
 
 os.environ["VLLM_ALLOW_LONG_MAX_MODEL_LEN"] = "1"
 
@@ -22,8 +22,7 @@ Your task is to read legal texts and formulate complex hypothetical scenarios.
 These scenarios will later be used to create Multiple Choice Questions (MCQ) with 4 options where MULTIPLE options can be correct.
 You do NOT provide the options or the answer. You only formulate the scenario and the question stem."""
 
-def clean_text(text: str) -> str:
-    """Cleaning encoding artifacts."""
+def clean_text(text):
     if not text: return ""
     charmap = {'Y': "'", 'X': '"', 'Z': '-', 'T': '-', 'R': '®', 'C': '©'}
     def fix_mojibake(match): return charmap.get(match.group(1), "")
@@ -33,10 +32,7 @@ def clean_text(text: str) -> str:
     text = re.sub(r'Downloaded from.*', '', text, flags=re.IGNORECASE)
     return re.sub(r'\s+', ' ', text).strip()
 
-def prepare_prompts(raw_data: List[Dict], tokenizer) -> Tuple[List[str], List[Dict]]:
-    """
-    Prepares prompts strictly filtering by length.
-    """
+def prepare_prompts(raw_data, tokenizer):
     prompts_list = []  
     metadata_list = [] 
     
@@ -97,8 +93,7 @@ def prepare_prompts(raw_data: List[Dict], tokenizer) -> Tuple[List[str], List[Di
         
     return prompts_list, metadata_list
 
-def extract_json(text: str) -> str:
-    """Robust JSON extraction."""
+def extract_json(text):
     try:
         start = text.find('{')
         end = text.rfind('}') + 1

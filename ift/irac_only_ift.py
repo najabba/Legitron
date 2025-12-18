@@ -8,7 +8,7 @@ from transformers import AutoTokenizer
 
 # --- CONFIGURATION ---
 INPUT_FILE = "/capstor/store/cscs/swissai/a127/meditron/datasets/legitron/charlotte_scrape/output.json"
-OUTPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/lsimonnet/axolotl_datasets/ift_try2_vLLM_charlotte_qwen_full.json"
+OUTPUT_FILE = "/capstor/store/cscs/swissai/a127/homes/$USER/axolotl_datasets/ift_try2_vLLM_charlotte_qwen_full.json"
 
 MODEL_PATH = "Qwen/Qwen2.5-32B-Instruct"
 
@@ -22,7 +22,7 @@ Your task is to extract complex legal scenarios from provided academic texts and
 You must follow the IRAC method (Issue, Rule, Application, Conclusion).
 The output must be a valid JSON object."""
 
-def clean_text(text: str) -> str:
+def clean_text(text):
     """Nettoyage avancé (Regex) des artefacts d'encodage."""
     if not text: return ""
     
@@ -39,8 +39,7 @@ def clean_text(text: str) -> str:
     
     return text.strip()
 
-def prepare_prompts(raw_data: List[Dict], tokenizer) -> tuple[List[str], List[int]]:
-    """Prépare tous les prompts formatés ChatML en mémoire."""
+def prepare_prompts(raw_data, tokenizer):
     prompts_list = []
     original_indices = []
 
@@ -73,7 +72,6 @@ def prepare_prompts(raw_data: List[Dict], tokenizer) -> tuple[List[str], List[in
             {"role": "user", "content": user_content}
         ]
         
-        # template Qwen (<|im_start|>...)
         full_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         
         prompts_list.append(full_prompt)
@@ -93,11 +91,9 @@ def main():
     print("🔧 Initializing Tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, trust_remote_code=True)
 
-    # preparing data
     prompts, indices = prepare_prompts(raw_data, tokenizer)
     print(f"🚀 Ready to process {len(prompts)} documents.")
 
-    # Initilizing vLLM
     print(f"🔌 Initializing vLLM Engine (TP={TENSOR_PARALLEL_SIZE})...")
     llm = LLM(
         model=MODEL_PATH,
@@ -115,7 +111,6 @@ def main():
         stop=["<|im_end|>", "<|endoftext|>"]
     )
 
-    # Generation
     print("🔥 Starting High-Throughput Generation...")
     outputs = llm.generate(prompts, sampling_params)
 
@@ -128,7 +123,6 @@ def main():
         generated_text = output.outputs[0].text
         
         try:
-            # Cleaning 
             cleaned_json = generated_text.replace("```json", "").replace("```", "").strip()
             data = json.loads(cleaned_json)
             
@@ -162,7 +156,6 @@ def main():
         except json.JSONDecodeError:
             continue 
 
-    
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     print(f"💾 Saving {len(final_dataset)} valid items to {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
