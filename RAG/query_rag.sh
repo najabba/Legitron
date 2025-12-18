@@ -1,18 +1,18 @@
 #!/bin/bash
 #SBATCH --job-name RAG_Query
-#SBATCH --chdir /users/vesy/
-#SBATCH --output /users/vesy/Legitron/reports/rag/Query-%x.%j.out
-#SBATCH --error /users/vesy/Legitron/reports/rag/Query-%x.%j.err
+#SBATCH --chdir /users/$USER/
+#SBATCH --output /users/$USER/Legitron/reports/rag/-%x.%j.out
+#SBATCH --error /users/$USER/Legitron/reports/rag/-%x.%j.err
 #SBATCH --nodes 1              
 #SBATCH --ntasks-per-node 1     
 #SBATCH --gres gpu:1            
 #SBATCH --cpus-per-task 32      
 #SBATCH --time 01:00:00     
-#SBATCH --environment /users/vesy/.edf/axolotl.toml
+#SBATCH --environment /users/$USER/.edf/axolotl.toml
 #SBATCH -A a127
 
 # --- Environment Variables ---
-export HF_TOKEN="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"
+export HF_TOKEN= #Your Token
 
 export CUDA_LAUNCH_BLOCKING=1
 echo "START TIME: $(date)"
@@ -20,19 +20,19 @@ set -eo pipefail
 set -x
 
 # --- Run the RAG Query Script ---
-SCRIPT_PATH="/users/vesy/Legitron/RAG/query_rag.py"
+SCRIPT_PATH="/users/$USER/Legitron/RAG/query_rag.py"
 
 echo "Running RAG query script..."
 
 # Default parameters (override with command line arguments)
-INDEX_DIR="${INDEX_DIR:-/users/vesy/Legitron/RAG/ihl_index}"
-LLM_MODEL="${LLM_MODEL:-/capstor/store/cscs/swissai/a127/homes/nabbassi/models/llama3.1-8B-IFT_charlotte}"
+INDEX_DIR="${INDEX_DIR:-/users/$USER/Legitron/RAG/ihl_index}"
+LLM_MODEL="${LLM_MODEL:-/MODEL/PATH}"
 #"change this question to whatever you want"
 QUESTION="${QUESTION:- help me I want to know in which rule specifically i can use to answer: Can we bother the elderly ?}"
 TOP_K="${TOP_K:-5}"
 MAX_LENGTH="${MAX_LENGTH:-1024}"
 TEMPERATURE="${TEMPERATURE:-0.7}"
-OUTPUT_FILE="${OUTPUT_FILE:-/users/vesy/Legitron/reports/rag/output.txt}"
+OUTPUT_FILE="${OUTPUT_FILE:-/users/$USER/Legitron/reports/rag/output.txt}"
 
 export CMD="python $SCRIPT_PATH \
   --index-dir $INDEX_DIR \
