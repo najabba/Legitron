@@ -2,7 +2,7 @@
 
 This repository contains the foundational research contributing to **Legitron**, an initiative at the EPFL Light Lab to develop a domain-specialized Large Language Model for International Humanitarian Law.
 
-While the ultimate goal of Legitron is a fully deployable legal assistant, this project focuses on the **comparative analysis and validation of training methodologies**. We explore various base models, fine-tuning strategies (Instruction Fine-Tuning), and Retrieval-Augmented Generation (RAG) pipelines on a targeted scale. The insights derived here—identifying effective strategies and eliminating suboptimal approaches—serve as the empirical groundwork for the future full-scale development of Legitron.
+While the ultimate goal of Legitron is a fully deployable legal assistant, this project focuses on the **comparative analysis and validation of training methodologies**. We explore various base models, fine-tuning strategies (Instruction Fine-Tuning), and Retrieval-Augmented Generation (RAG) pipelines on a targeted scale. The insights derived here serve as the empirical groundwork for the future full-scale development of Legitron.
 
 ## 📂 Project Structure
 
