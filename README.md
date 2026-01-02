@@ -6,6 +6,8 @@ While the ultimate goal of Legitron is a fully deployable legal assistant, this 
 
 ## 📂 Project Structure
 
+* **`analysis/`**: **Scripts used for analysis purpose**.
+    * `Analyze_questions.ipynb`: It reproduces figures and tables found in the report and includes additional exploratory analysis on dataset themes and source distributions that were used to profile the benchmark.
 * **`report/`**: **Project Documentation**.
     * `Report.pdf`: The final report detailing our methodology, experiments, and findings.
 * **`datasets/`**: **Data Central**. Contains benchmarks, IHL rules, and synthetic training data.
@@ -23,6 +25,7 @@ While the ultimate goal of Legitron is a fully deployable legal assistant, this 
     * `query_rag.py`: Interactively query the model with RAG support.
     * `ihl_index/`: Stores the generated vector store (embeddings + rules).
 * **`evaluation/`**: **Benchmarking Tools**.
+    * `CheatRag.py`: .
     * `evaluate.py`: Standard MCQ evaluation on the IHL benchmark.
     * `evaluateRAG.py`: Evaluation using the RAG retriever to inject context.
 * **`train/`**: **Training Scripts**.
@@ -43,6 +46,80 @@ While the ultimate goal of Legitron is a fully deployable legal assistant, this 
     pip install -r requirements.txt
     ```
     *Note: The `ift/` scripts require `vllm`. Ensure your environment supports it (CUDA 12+ recommended).*
+
+## 🔧 Environment Setup (CSCS Cluster)
+
+To run experiments on the CSCS cluster, you must configure the Enroot container environments by creating specific TOML configuration files in your local `.edf/` directory.
+
+### 1. Standard Training Environment (`axolotl.toml`)
+For standard Continual Pre-Training (CPT) and Fine-Tuning tasks, create a file at `.edf/axolotl.toml` with the following configuration. This uses the standard `axolotl-apertus` image.
+
+```toml
+# File: .edf/axolotl.toml
+
+# Base Docker image for training
+image = "/capstor/store/cscs/swissai/a127/meditron/docker/axolotl-apertus.sqsh"
+
+mounts = ["/capstor", "/iopsstor", "/users"]
+writable = true
+
+[annotations]
+com.hooks.aws_ofi_nccl.enabled = "true"
+com.hooks.aws_ofi_nccl.variant = "cuda12"
+
+[env]
+HF_HOME = "${SCRATCH}/hf"
+CUDA_CACHE_DISABLE = "1"
+NCCL_NET = "AWS Libfabric"
+NCCL_CROSS_NIC = "1"
+NCCL_NET_GDR_LEVEL = "PHB"
+FI_CXI_DISABLE_HOST_REGISTER = "1"
+FI_MR_CACHE_MONITOR = "userfaultfd"
+FI_CXI_DEFAULT_CQ_SIZE = "131072"
+FI_CXI_DEFAULT_TX_SIZE = "32768"
+FI_CXI_RX_MATCH_MODE = "software"
+FI_CXI_SAFE_DEVMEM_COPY_THRESHOLD = "16777216"
+FI_CXI_COMPAT = "0"
+```
+### 2. IFT & Inference Environment (`axolotl_vllm.toml`)
+
+For the Instruction Fine-Tuning (IFT) pipeline and synthetic data generation, we require vLLM support. Create a copy named `.edf/axolotl_vllm.toml` and update the `image` path to the vLLM-compatible container:
+
+```toml
+# File: .edf/axolotl_vllm.toml
+
+# CHANGED: Uses the vLLM-compatible image
+image = "/capstor/store/cscs/swissai/a127/meditron/docker/axolotl-vllm.sqsh"
+
+# ... (Keep all other mounts, annotations, and env variables exactly the same as above)
+mounts = ["/capstor", "/iopsstor", "/users"]
+writable = true
+
+[annotations]
+com.hooks.aws_ofi_nccl.enabled = "true"
+com.hooks.aws_ofi_nccl.variant = "cuda12"
+
+[env]
+HF_HOME = "${SCRATCH}/hf"
+CUDA_CACHE_DISABLE = "1"
+NCCL_NET = "AWS Libfabric"
+NCCL_CROSS_NIC = "1"
+NCCL_NET_GDR_LEVEL = "PHB"
+FI_CXI_DISABLE_HOST_REGISTER = "1"
+FI_MR_CACHE_MONITOR = "userfaultfd"
+FI_CXI_DEFAULT_CQ_SIZE = "131072"
+FI_CXI_DEFAULT_TX_SIZE = "32768"
+FI_CXI_RX_MATCH_MODE = "software"
+FI_CXI_SAFE_DEVMEM_COPY_THRESHOLD = "16777216"
+FI_CXI_COMPAT = "0"
+```
+### Usage
+
+As described in the [LiGHT Lab CSCS Guide](https://epflight.github.io/LiGHT-doc/clusters/cscs/axolotl_training/). setup guide, ensure that your submission scripts or repository configuration files point to the correct TOML file depending on the task:
+
+Use `.edf/axolotl.toml` for standard training.
+
+Use `.edf/axolotl_vllm.toml` for high-throughput generation and IFT scripts.
 
 ## 📊 Data Dictionary
 

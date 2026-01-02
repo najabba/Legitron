@@ -4,14 +4,15 @@ sentence-transformers>=2.2.2
 numpy
 scikit-learn
 
-axolotl  # Note: often requires specific install from source
+# Note: axolotl often requires installation from source or a specific Docker image
+axolotl
 deepspeed
 accelerate
 peft
 bitsandbytes
 wandb
 
-vllm>=0.4.0  # Required for the high-throughput generation scripts in ift/
+vllm>=0.4.0
 
 tqdm
 typing
